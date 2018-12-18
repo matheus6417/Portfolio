@@ -4,68 +4,115 @@
   </div>
 </template>
 <style>
-  /*! CSS Used from: http://thieb.co/build/styles.css */
-  .u-hidden {
-    pointer-events: none;
+  .u-inactive,
+  [hidden] {
+    display: none !important
   }
 
+  .Intro,
+  .u-unselectable {
+    -moz-user-select: none;
+    -ms-user-select: none
+  }
+
+  .u-hidden,
+  .u-unclickable {
+    pointer-events: none
+  }
+
+  .Intro,
+  .Intro-loader,
+  .Intro-progress,
+  .Intro-text,
+  .u-resetBtn,
+  .u-table-cell--center,
+  .u-vCenter-parent {
+    text-align: center
+  }
+
+  .u-centerBg,
   :not(body) {
-    background-repeat: no-repeat;
+    background-repeat: no-repeat
   }
 
+  .u-resetBtn,
   a {
-    text-decoration: none;
+    text-decoration: none
   }
 
+  .u-resestBtn--withoutOutline,
   a,
   button {
-    outline: 0;
+    outline: 0
   }
 
   .u-fullParent,
-  .u-middle--abs {
+  .u-middle--abs,
+  .u-topCorner,
+  .u-topCorner--right {
     top: 0;
-    position: absolute;
+    position: absolute
   }
 
   html {
     border-collapse: collapse;
-    line-height: 1;
+    line-height: 1
   }
 
   * {
-    border-collapse: inherit;
+    border-collapse: inherit
   }
 
   :not(body) {
     background-position: 50%;
-    background-size: cover;
+    background-size: cover
   }
 
   body,
   html {
     padding: 0;
-    margin: 0;
+    margin: 0
   }
 
+  menu,
+  ol,
   ul {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none
   }
 
   li,
-  p {
+  p,
+  small {
     margin: 0;
-    padding: 0;
+    padding: 0
   }
 
   a {
-    color: inherit;
+    color: inherit
   }
 
+  figure,
+  form {
+    margin: 0
+  }
+
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0
+  }
+
+  .u-inactive {
+    visibility: hidden !important
+  }
+
+  .Header.is-work .HeaderNav-works--regular,
+  .Intro-progress .sizing,
+  .Intro-text--sizing,
   .u-hidden {
-    visibility: hidden;
+    visibility: hidden
   }
 
   .u-visuallyHidden {
@@ -77,89 +124,302 @@
     overflow: hidden;
     clip: rect(0 0 0 0);
     border: 0;
-    color: #757575;
+    color: #757575
+  }
+
+  .u-visuallyHidden--focusable:active,
+  .u-visuallyHidden--focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    opacity: 0
+  }
+
+  .u-unselectable {
+    cursor: default;
+    -webkit-user-select: none
+  }
+
+  .u-unclickable {
+    cursor: default
   }
 
   .u-fullParent,
   .u-fullSize {
     width: 100%;
-    height: 100%;
+    height: 100%
   }
 
   .u-fullParent {
+    left: 0
+  }
+
+  .u-fluid--w {
+    width: 100%;
+    height: auto
+  }
+
+  .u-fluid--h {
+    width: auto;
+    height: 100%
+  }
+
+  .u-topCorner--right {
+    right: 0
+  }
+
+  .u-center--rel {
+    display: block;
+    margin: auto
+  }
+
+  .u-center--abs {
+    position: absolute;
     left: 0;
+    right: 0;
+    margin: auto
   }
 
   .u-middle--abs {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: auto
   }
 
   h1,
+  h2,
   h3,
+  h4,
+  h5,
+  h6,
+  hr,
   p {
-    margin: 0;
+    margin: 0
   }
 
-  .u-table-cell--middle {
-    vertical-align: middle;
+  .u-inlineList {
+    position: relative
+  }
+
+  .u-inlineList-item,
+  .u-inlineList-item--bottom,
+  .u-inlineList-item--middle,
+  .u-inlineList-item--top {
+    position: relative;
+    display: inline-block
+  }
+
+  .u-inlineList-item--top {
+    vertical-align: top
+  }
+
+  .u-inlineList-item--middle {
+    vertical-align: middle
+  }
+
+  .u-inlineList-item--bottom {
+    vertical-align: bottom
+  }
+
+  .u-table-cell--center,
+  .u-table-cell--middle,
+  .u-vCenter {
+    vertical-align: middle
   }
 
   .u-table {
-    display: table;
+    display: table
   }
 
   .u-table-cell,
+  .u-table-cell--center,
   .u-table-cell--middle {
-    display: table-cell;
+    display: table-cell
+  }
+
+  .u-cf {
+    zoom: 1
+  }
+
+  .u-cf:after,
+  .u-cf:before {
+    content: " ";
+    display: table
+  }
+
+  .u-cf:after {
+    clear: both
+  }
+
+  .u-centerBg {
+    background-size: 100%;
+    background-position: center
+  }
+
+  .u-antialiasing {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased
+  }
+
+  .u-resetBtn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: 0 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    cursor: pointer;
+    white-space: normal;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    -webkit-appearance: none
+  }
+
+  .About h1,
+  .About-socials,
+  .Intro-text,
+  .u-vCenter-parent {
+    white-space: nowrap
+  }
+
+  .u-resetBtn:not(input) {
+    user-select: none
+  }
+
+  .u-resetBtn::-moz-focus-inner {
+    border: 0;
+    padding: 0
   }
 
   h1,
-  h3 {
-    font-weight: 400;
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 400
+  }
+
+  hr {
+    border: 0
   }
 
   button {
     border: none;
-    padding: 0;
+    padding: 0
   }
 
   html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale
   }
 
   body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+    text-size-adjust: 100%
   }
 
   *,
   :after,
   :before {
-    box-sizing: inherit;
+    box-sizing: inherit
+  }
+
+  .View {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%
   }
 
   .u-hitArea {
-    background: url(http://thieb.co/assets/images/transparent.gif);
+    background: transparent;
     background-size: 100%;
     cursor: pointer;
-    z-index: 2;
+    z-index: 2
   }
 
+  .u-vCenter-parent {
+    height: 100%
+  }
+
+  .u-vCenter-parent:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle
+  }
+
+  .u-vCenter {
+    display: inline-block
+  }
+
+  @font-face {
+    font-family: GothamNarrow-Medium;
+    src: url(~/static/fonts/GothamNarrow-Medium.woff) format("woff"), url(~/static/fonts/GothamNarrow-Medium.woff2) format("woff2"), url(~/static/fonts/GothamNarrow-Medium.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+  }
+
+  @font-face {
+    font-family: GothamNarrow-Book;
+    src: url(~/static/fonts/GothamNarrow-Book.woff) format("woff"), url(~/static/fonts/GothamNarrow-Book.woff2) format("woff2"), url(~/static/fonts/GothamNarrow-Book.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+  }
+
+  .About a,
+  .About em,
+  .About span,
+  .Work-awards li.is-me,
+  .Work-awards li.is-me span,
+  .Work-credits li.is-me,
+  .Work-credits li.is-me span,
+  .Work-description a,
+  .Work-intro,
+  .Work-linkout,
+  .Work-nav {
+    font-family: GothamNarrow-Bold
+  }
+
+  .About h1,
   .Footer-lang button,
   .Header-nav,
+  .Intro-progress,
+  .Menu-links,
+  .RotateScreen-text b,
   .TimelineHandle-block p,
+  .Work-awards h3,
+  .Work-awards li,
+  .Work-awards li span,
+  .Work-credits h3,
+  .Work-credits li,
+  .Work-credits li span,
+  .Work-infos p,
+  .Work-title h1,
   .WorkPreview-title h1 {
-    font-family: GothamNarrow-Medium;
+    font-family: GothamNarrow-Medium, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif
   }
 
-  .Footer a {
-    font-family: GothamNarrow-Book;
+  .About .small,
+  .About p,
+  .Footer a,
+  .Intro-text,
+  .RotateScreen-text,
+  .Work-awards li,
+  .Work-credits li,
+  .Work-description,
+  .Work-infos h3,
+  .WorkNav-separator {
+    font-family: GothamNarrow-Book, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif
   }
 
   body,
@@ -167,31 +427,305 @@
     width: 100%;
     height: 100%;
     background-color: #161616;
-    overflow: hidden;
+    overflow: hidden
   }
 
   .App {
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch
   }
 
+  .About.is-hidden,
+  .Intro,
+  .Reel,
+  .Work-media,
   .WorkPreview-content,
   .WorkPreview-title .line,
   .Works {
-    overflow: hidden;
+    overflow: hidden
   }
 
   .Footer,
   .Header {
-    width: 85.71429%;
-    margin-left: 7.14286%;
+    width: 85%;
+    margin: 0 7%
   }
 
+  .u-loading {
+    cursor: wait
+  }
+
+  .u-pointer {
+    cursor: pointer
+  }
+
+  .About-content .is-desktop a,
+  .Work-description .is-desktop a,
+  .Work-intro .is-desktop a,
+  .is-desktop .About-content a,
+  .is-desktop .Work-description a,
+  .is-desktop .Work-intro a,
+  .is-desktop .u-link {
+    color: transparent
+  }
+
+  .About-content a,
+  .Work-description a,
+  .Work-intro a,
+  .u-link {
+    position: relative;
+    display: inline-block;
+    transition: opacity .4s cubic-bezier(.23, 1, .32, 1)
+  }
+
+  .About-content a:after,
+  .About-content a:before,
+  .Work-description a:after,
+  .Work-description a:before,
+  .Work-intro a:after,
+  .Work-intro a:before,
+  .u-link:after,
+  .u-link:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    color: #fff;
+    pointer-events: none;
+    transition: -webkit-transform .4s cubic-bezier(.23, 1, .32, 1), opacity .4s cubic-bezier(.23, 1, .32, 1);
+    transition: transform .4s cubic-bezier(.23, 1, .32, 1), opacity .4s cubic-bezier(.23, 1, .32, 1)
+  }
+
+  .About-content,
+  .About-left,
+  .About-right {
+    position: relative;
+    z-index: 1
+  }
+
+  .About-content a:before,
+  .Work-description a:before,
+  .Work-intro a:before,
+  .u-link:before {
+    opacity: .2;
+    transition-delay: 80ms
+  }
+
+  .About-content a:after,
+  .Work-description a:after,
+  .Work-intro a:after,
+  .u-link:after {
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
+    opacity: 0;
+    transition-delay: 0s
+  }
+
+  .About-content a:hover:before,
+  .Work-description a:hover:before,
+  .Work-intro a:hover:before,
+  .u-link:hover:before {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    transition-delay: 0s;
+    opacity: 0 !important
+  }
+
+  .About-content a:hover:after,
+  .Work-description a:hover:after,
+  .Work-intro a:hover:after,
+  .u-link:hover:after {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    transition-delay: 80ms;
+    opacity: 1
+  }
+
+  .About-content .is-device a:after,
+  .About-content .is-device a:before,
+  .Work-description .is-device a:after,
+  .Work-description .is-device a:before,
+  .Work-intro .is-device a:after,
+  .Work-intro .is-device a:before,
+  .is-device .About-content a:after,
+  .is-device .About-content a:before,
+  .is-device .Work-description a:after,
+  .is-device .Work-description a:before,
+  .is-device .Work-intro a:after,
+  .is-device .Work-intro a:before,
+  .is-device .u-link:after,
+  .is-device .u-link:before {
+    content: none;
+    display: none
+  }
+
+  .Intro:before,
+  .Reel-video:after,
   .WorkPreview-cover:after,
   .WorkPreview:before {
-    content: "";
+    content: ""
+  }
+
+  .About-socials li,
+  .AboutSocial {
+    display: inline-block
+  }
+
+  .About {
+    z-index: 1
+  }
+
+  .About h1 {
+    font-size: 80px;
+    line-height: 80px;
+    color: #fff;
+    margin-bottom: 9px
+  }
+
+  .About p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 5px
+  }
+
+  .About a,
+  .About em {
+    font-weight: 400;
+    font-style: normal
+  }
+
+  .About .small {
+    font-size: 10px;
+    line-height: 14px
+  }
+
+  .About h1,
+  .About img,
+  .About p,
+  .About ul {
+    opacity: 0
+  }
+
+  .About-content a:before {
+    opacity: 1
+  }
+
+  .About-left,
+  .About-right {
+    display: inline-block;
+    height: auto;
+    vertical-align: top;
+    margin-bottom: 20px
+  }
+
+  .About-left {
+    width: 22.5%;
+    margin-left: 22.5%
+  }
+
+  .About-right {
+    width: 21.42857%;
+    margin-left: 7%;
+    margin-top: 142px
+  }
+
+  .About-profile {
+    position: absolute;
+    left: 66%;
+    top: 10px;
+    width: 193px;
+    height: 193px
+  }
+
+  .About-socials {
+    margin-left: 5px;
+    margin-top: 51px
+  }
+
+  .About-socials li:nth-of-type(n+2) {
+    margin-left: 21px
+  }
+
+  .AboutSocial {
+    position: relative
+  }
+
+  .AboutSocial svg {
+    fill: #fff
+  }
+
+  .AboutSocial--twitter,
+  .AboutSocial--vimeo {
+    width: 14px;
+    height: 12px
+  }
+
+  .AboutSocial--dribbble {
+    width: 14px;
+    height: 13px;
+    margin-left: 1px
+  }
+
+  .AboutSocial--linkedin {
+    width: 13px;
+    height: 13px;
+    margin-left: 1px
+  }
+
+  .is-desktop .About .AboutSocial {
+    transition: opacity .4s cubic-bezier(.23, 1, .32, 1)
+  }
+
+  .is-desktop .About .AboutSocial:hover {
+    opacity: .4
+  }
+
+  @media (max-width:1279px) {
+    .is-desktop .About h1 {
+      font-size: 70px;
+      line-height: 70px
+    }
+  }
+
+  .is-phone .About h1 {
+    font-size: 38px;
+    line-height: 38px;
+    margin: 0 0 12px -5px
+  }
+
+  .is-phone .About p {
+    font-size: 10px;
+    line-height: 15px;
+    margin: 0 0 0 -4px
+  }
+
+  .is-phone .About .small {
+    font-size: 8px;
+    line-height: 10px
+  }
+
+  .is-phone .About-content {
+    padding: 89px 14.28571% 50px
+  }
+
+  .is-phone .About-left,
+  .is-phone .About-right {
+    width: 100%;
+    margin: 0
+  }
+
+  .is-phone .About-profile {
+    display: none
+  }
+
+  .Intro {
+    display: inline-block;
+    user-select: none
   }
 
   .BackgroundType,
@@ -199,18 +733,484 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    pointer-events: none;
+    pointer-events: none
+  }
+
+  .Intro,
+  .Intro * {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent
+  }
+
+  .Intro:before {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%
+  }
+
+  .Intro-loader {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    width: 100%
+  }
+
+  .Intro-text {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-size: 13px;
+    color: #fff;
+    padding: 9px 27px
+  }
+
+  .Intro-text--en,
+  .Intro-text--fr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0
+  }
+
+  .Intro-text--en .word,
+  .Intro-text--fr .word {
+    display: inline-block;
+    opacity: 0
+  }
+
+  .Intro-progress {
+    font-size: 0;
+    color: rgba(61, 61, 61, .2);
+    margin-top: 25px
+  }
+
+  .Intro-progress .sizing,
+  .Intro-progress .value {
+    font-size: 418px
+  }
+
+  .IntroProgress-double,
+  .IntroProgress-single {
+    position: relative;
+    display: inline-block;
+    font-size: 0
+  }
+
+  .Intro-video img,
+  .Reel-video,
+  .Work {
+    position: absolute
+  }
+
+  .Intro-video {
+    width: 215px;
+    height: 129px;
+    pointer-events: none
+  }
+
+  .Intro-video img {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0
+  }
+
+  .is-phone .Intro-loader p {
+    font-size: 10px;
+    padding: 6px 27px
+  }
+
+  .is-phone .Intro-video {
+    width: 161px;
+    height: 97px;
+    -webkit-transform: translateX(-7px);
+    -ms-transform: translateX(-7px);
+    transform: translateX(-7px)
+  }
+
+  .is-phone .Intro-progress .sizing,
+  .is-phone .Intro-progress .value {
+    font-size: 209px
+  }
+
+  .Reel-video {
+    width: 57%;
+    z-index: 1;
+    left: 21.5%;
+    top: 0;
+    opacity: 0;
+    background: #000
+  }
+
+  .Reel-video:after {
+    padding-top: 56.25%;
+    display: block
+  }
+
+  .is-phone .Reel-video {
+    width: 71.42857%;
+    left: 0
+  }
+
+  .Work {
+    z-index: 1
+  }
+
+  .Work-container,
+  .Work-media,
+  .Work-separator,
+  .Work-title {
+    position: relative
+  }
+
+  .Work-container {
+    z-index: 1;
+    width: 57.14286%;
+    margin: 210px auto 0
+  }
+
+  .Work-title h1 {
+    color: #fff;
+    font-size: 80px;
+    line-height: 80px;
+    text-align: left;
+    white-space: initial;
+    margin-left: -5px;
+    opacity: 0
+  }
+
+  @media (max-width:1279px) {
+    .is-desktop .Work-title h1 {
+      font-size: 70px;
+      line-height: 70px
+    }
+  }
+
+  .Work-intro {
+    font-size: 14px;
+    line-height: 20px;
+    color: #f0f0f0;
+    margin-bottom: 14px;
+    margin-top: 19px;
+    opacity: 0
+  }
+
+  .Work-description {
+    width: 59.875%;
+    margin-top: 72px;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 20px;
+    color: #f0f0f0;
+    opacity: 0
+  }
+
+  .Work-separator {
+    width: 45px;
+    height: 3px;
+    background-color: #fff;
+    top: 46px;
+    left: 0;
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0)
+  }
+
+  .Work-infos {
+    width: 25%;
+    margin-left: 12.5%;
+    line-height: 20px;
+    margin-top: 32px;
+    opacity: 0
+  }
+
+  .Work-infos h3 {
+    font-size: 10px;
+    color: #fff
+  }
+
+  .Work-infos p {
+    font-size: 13px;
+    color: #fff
+  }
+
+  .WorkInfos-block:not(:last-of-type) {
+    margin-bottom: 20px
+  }
+
+  .Work-description,
+  .Work-infos {
+    float: left
+  }
+
+  .Work-description a:before,
+  .Work-intro a:before {
+    opacity: 1
+  }
+
+  .Work-credits {
+    margin-top: 77px;
+    opacity: 0
+  }
+
+  .Work-awards {
+    opacity: 0
+  }
+
+  .Work-awards h3,
+  .Work-awards li,
+  .Work-credits h3,
+  .Work-credits li {
+    color: #fff;
+    font-size: 12px;
+    line-height: 20px
+  }
+
+  .Work-media {
+    width: 100%;
+    opacity: 0
+  }
+
+  .Work-media img,
+  .Work-media li,
+  .Work-media video {
+    width: 100%
+  }
+
+  .Work-media iframe {
+    position: absolute
+  }
+
+  .Work-media li {
+    position: relative
+  }
+
+  .Work-media li:not(:last-of-type) {
+    margin-bottom: 90px
+  }
+
+  .Work-media li.is-iframe {
+    padding-bottom: 56.25%;
+    position: relative;
+    background-size: 110px 68px, 100%;
+    background-position: center
+  }
+
+  .is-phone .Work {
+    width: 100%
+  }
+
+  .is-phone .Work-container {
+    width: 100%;
+    margin: 0;
+    padding: 89px 14.28571% 0
+  }
+
+  .is-phone .Work-title h1 {
+    font-size: 38px;
+    line-height: 38px;
+    max-width: 220px;
+    margin: 0 0 12px
+  }
+
+  .is-phone .Work-description {
+    float: none;
+    width: 100%
+  }
+
+  .is-phone .Work-description,
+  .is-phone .Work-intro {
+    font-size: 10px;
+    line-height: 15px;
+    margin: 0 0 0 -4px
+  }
+
+  .is-phone .Work-intro {
+    margin-bottom: 15px
+  }
+
+  .is-phone .Work-media {
+    margin-top: 30px;
+    margin-left: -4px
+  }
+
+  .is-phone .Work-media li:not(:last-of-type) {
+    margin-bottom: 30px
+  }
+
+  .is-phone .Work-media li.is-iframe {
+    background-size: 55px 34px, 100%
+  }
+
+  .is-phone .Work-awards,
+  .is-phone .Work-credits {
+    margin-top: 27px
+  }
+
+  .is-phone .Work-navBg {
+    height: 80px;
+    bottom: 0
+  }
+
+  .is-phone .Work-nav {
+    margin-top: 60px;
+    margin-bottom: 28px
+  }
+
+  .Work-navBg {
+    position: absolute;
+    bottom: 0;
+    left: -38%;
+    width: 176%;
+    height: 174px;
+    background: rgba(255, 255, 255, .02);
+    -webkit-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0)
+  }
+
+  .Work-nav {
+    margin-top: 168px;
+    margin-bottom: 71px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 13px
+  }
+
+  .is-device .Work-nav>* {
+    opacity: 0
+  }
+
+  .WorkNav-link {
+    position: relative;
+    display: inline-block
+  }
+
+  .WorkNav-arrow {
+    position: absolute;
+    width: 21px;
+    height: 5px;
+    fill: #fff;
+    top: 50%;
+    margin-top: -2px;
+    opacity: 0
+  }
+
+  .WorkNav-arrow.WorkNav-arrow--left {
+    left: -23px
+  }
+
+  .WorkNav-arrow.WorkNav-arrow--right {
+    right: -23px;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1)
+  }
+
+  .is-desktop .Work-scrollTransition {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px)
+  }
+
+  .is-desktop .Work-scrollTransition.is-active {
+    transition: opacity .6s cubic-bezier(.23, 1, .32, 1), -webkit-transform .6s cubic-bezier(.23, 1, .32, 1);
+    transition: opacity .6s cubic-bezier(.23, 1, .32, 1), transform .6s cubic-bezier(.23, 1, .32, 1);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1
+  }
+
+  .is-desktop .Work-scrollTransition.Work-navBg {
+    opacity: 1;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0)
+  }
+
+  .is-desktop .Work-scrollTransition.Work-navBg.is-active {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1)
+  }
+
+  .is-desktop .Work-scrollTransition.Work-nav {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+  }
+
+  .is-desktop .Work-scrollTransition.Work-nav.is-active {
+    opacity: 1
+  }
+
+  .is-desktop .WorkNav-arrow {
+    transition: -webkit-transform .4s cubic-bezier(.23, 1, .32, 1), opacity .4s cubic-bezier(.23, 1, .32, 1);
+    transition: transform .4s cubic-bezier(.23, 1, .32, 1), opacity .4s cubic-bezier(.23, 1, .32, 1)
+  }
+
+  .is-desktop .WorkNav-link {
+    transition: -webkit-transform .4s cubic-bezier(.23, 1, .32, 1);
+    transition: transform .4s cubic-bezier(.23, 1, .32, 1);
+    transition-delay: 0s
+  }
+
+  .is-desktop .WorkNav-link:hover {
+    transition-delay: 40ms
+  }
+
+  .is-desktop .WorkNav-link.WorkNav-link--prev:hover {
+    -webkit-transform: translateX(-2px);
+    -ms-transform: translateX(-2px);
+    transform: translateX(-2px)
+  }
+
+  .is-desktop .WorkNav-link.WorkNav-link--prev:hover .WorkNav-arrow {
+    -webkit-transform: translateX(-8px);
+    -ms-transform: translateX(-8px);
+    transform: translateX(-8px);
+    opacity: 1
+  }
+
+  .is-desktop .WorkNav-link.WorkNav-link--next:hover {
+    -webkit-transform: translateX(2px);
+    -ms-transform: translateX(2px);
+    transform: translateX(2px)
+  }
+
+  .is-desktop .WorkNav-link.WorkNav-link--next:hover .WorkNav-arrow {
+    -webkit-transform: scaleX(-1) translateX(-8px);
+    -ms-transform: scaleX(-1) translateX(-8px);
+    transform: scaleX(-1) translateX(-8px);
+    opacity: 1
+  }
+
+  .is-phone .WorkNav-arrow,
+  .is-tablet .WorkNav-arrow {
+    display: none
   }
 
   .Works {
     opacity: 0;
     cursor: -webkit-grab;
-    cursor: grab;
+    cursor: grab
   }
 
   .Works:active {
     cursor: -webkit-grabbing;
-    cursor: grabbing;
+    cursor: grabbing
   }
 
   .Works .Timeline {
@@ -219,22 +1219,38 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-    bottom: 69px;
+    bottom: 69px
   }
 
   .Works-list {
     z-index: 1;
     white-space: nowrap;
-    left: 21.42857%;
+    left: 21.42857%
   }
 
   .Works-list .WorkPreview:nth-of-type(n+2) {
-    margin-left: 10.28571%;
+    margin-left: 10.28571%
+  }
+
+  .is-phone .Works .Timeline {
+    width: 71.42857%;
+    bottom: 45px
+  }
+
+  .is-phone .Works-list {
+    left: 14.28571%;
+    top: 93px;
+    bottom: 93px;
+    height: auto
+  }
+
+  .is-phone .Works-list .WorkPreview:nth-of-type(n+2) {
+    margin-left: 7.14286%
   }
 
   .BackgroundType {
     position: absolute;
-    user-select: none;
+    user-select: none
   }
 
   .Footer {
@@ -242,14 +1258,14 @@
     z-index: 10;
     user-select: none;
     bottom: 71px;
-    opacity: 0;
+    opacity: 0
   }
 
   .Header,
   .TimelineHandle-block p {
     -webkit-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
+    -ms-user-select: none
   }
 
   .Footer a,
@@ -257,39 +1273,43 @@
     font-size: 12px;
     pointer-events: auto;
     color: #fff;
-    opacity: .2;
+    opacity: .2
   }
 
+  .Header-nav a p,
   .Noise,
   .Timeline {
-    pointer-events: none;
+    pointer-events: none
   }
 
+  .Footer a.is-active,
   .Footer button.is-active,
   .is-desktop .Footer.is-ready a:hover,
   .is-desktop .Footer.is-ready button:hover {
-    opacity: 1;
+    opacity: 1
   }
 
   .Footer a {
-    display: inline-block;
+    display: inline-block
   }
 
   .Header-menuButton,
   .Header-menuButtonArea,
-  .is-desktop .Header-logo .underline {
-    display: none;
+  .is-crawler .Footer,
+  .is-desktop .Header-logo .underline,
+  .is-phone .Footer a {
+    display: none
   }
 
   .is-desktop .Footer.is-ready a,
   .is-desktop .Footer.is-ready button {
-    transition: opacity .4s cubic-bezier(.23, 1, .32, 1);
+    transition: opacity .4s cubic-bezier(.23, 1, .32, 1)
   }
 
   .Footer-lang {
     position: absolute;
     right: -9px;
-    bottom: 0;
+    bottom: 0
   }
 
   .Footer-lang button {
@@ -299,13 +1319,35 @@
     border: 0;
     background: 0 0;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 5px
+  }
+
+  .Menu-background,
+  .RotateScreen {
+    background: #1a1a1a
+  }
+
+  .is-phone .Footer {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0
+  }
+
+  .is-phone .Footer .Footer-lang {
+    position: relative;
+    right: auto;
+    bottom: auto
   }
 
   .Header {
     position: fixed;
     z-index: 10;
-    user-select: none;
+    user-select: none
+  }
+
+  .Header.is-work .HeaderNav-works--back {
+    visibility: visible
   }
 
   .Header-logo {
@@ -314,7 +1356,7 @@
     top: 56px;
     width: 59px;
     height: 34px;
-    opacity: 0;
+    opacity: 0
   }
 
   .HeaderLogo-anim {
@@ -322,7 +1364,7 @@
     width: 14px;
     height: auto;
     left: 25px;
-    top: 29px;
+    top: 29px
   }
 
   .Header-nav {
@@ -331,32 +1373,32 @@
     top: 71px;
     opacity: 0;
     color: #fff;
-    font-size: 13px;
+    font-size: 13px
   }
 
   .Header-nav a,
   .Header-nav span {
-    position: relative;
+    position: relative
   }
 
   .Header-link,
   .Header-nav svg {
     top: 0;
-    position: absolute;
+    position: absolute
   }
 
   .Header-nav a {
     display: inline-block;
-    margin-left: 27px;
+    margin-left: 27px
   }
 
   .Header-nav a.is-active .Header-link {
-    color: #fff;
+    color: #fff
   }
 
   .Header-nav span a {
     position: absolute;
-    right: 0;
+    right: 0
   }
 
   .Header-nav svg {
@@ -368,54 +1410,257 @@
     -webkit-transform: translateY(-1.5px);
     -ms-transform: translateY(-1.5px);
     transform: translateY(-1.5px);
-    fill: #fff;
+    fill: #fff
   }
 
   .Header-link--sizing {
     position: relative;
-    visibility: hidden;
+    visibility: hidden
   }
 
   .Header-link--regular {
-    color: rgba(255, 255, 255, .2);
+    color: rgba(255, 255, 255, .2)
   }
 
   .HeaderNav-works--back .Header-link,
+  .Menu-links,
   .TimelineHandle-block--dark p {
-    color: #fff;
+    color: #fff
   }
 
   .Header-link--hover {
-    opacity: 0;
+    opacity: 0
   }
 
   .HeaderNav-works {
     position: absolute;
     top: 0;
     right: 0;
-    white-space: nowrap;
+    white-space: nowrap
   }
 
   .HeaderNav-works--regular {
-    visibility: visible;
+    visibility: visible
   }
 
-  .HeaderNav-works--back {
-    visibility: hidden;
+  .HeaderNav-works--back,
+  .RotateScreen-text--sizing {
+    visibility: hidden
+  }
+
+  .is-phone .Header-nav {
+    display: none
+  }
+
+  .is-phone .Header-logo {
+    left: 4px;
+    top: 27px;
+    width: 39px;
+    height: 25px
+  }
+
+  .is-phone .Header-menuButtonArea {
+    display: block;
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    top: 26px;
+    right: 3px
+  }
+
+  .is-phone .Header-menuButton {
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    top: 33px;
+    right: 10px;
+    opacity: 0
+  }
+
+  .is-phone .Header-menuButton rect {
+    fill: #fff;
+    stroke: none
+  }
+
+  .Menu {
+    z-index: 9;
+    text-align: center;
+    position: fixed;
+    opacity: 0
+  }
+
+  .Menu.is-about .MenuLink--about,
+  .Menu.is-reel .MenuLink--reel,
+  .Menu.is-works .MenuLink--works {
+    opacity: 1
+  }
+
+  .Menu-closeArea {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 24px;
+    right: 29px
+  }
+
+  .Menu-close {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 31px;
+    right: 36px
+  }
+
+  .Menu-close line {
+    stroke: #fff;
+    stroke-width: 3px;
+    fill: none
+  }
+
+  .Menu-links {
+    font-size: 20px
+  }
+
+  .Menu-links a {
+    opacity: .12;
+    display: block;
+    padding: 20px 0
+  }
+
+  .Menu-socials li,
+  .MenuSocial {
+    display: inline-block
+  }
+
+  .Menu-socials {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    margin: 0 auto
+  }
+
+  .Menu-socials li:nth-of-type(n+2) {
+    margin-left: 21px
+  }
+
+  @media (orientation:landscape) {
+    .Menu-links a {
+      padding: 10px 0
+    }
+
+    .Menu-socials {
+      bottom: 22px
+    }
+  }
+
+  .MenuSocial {
+    position: relative
+  }
+
+  .MenuSocial svg {
+    fill: #fff;
+    opacity: .12
+  }
+
+  .MenuSocial--twitter,
+  .MenuSocial--vimeo {
+    width: 12px;
+    height: 10px
+  }
+
+  .MenuSocial--dribbble,
+  .MenuSocial--linkedin {
+    width: 12px;
+    height: 12px
   }
 
   .Noise {
+    position: fixed
+  }
+
+  .RotateScreen {
     position: fixed;
+    z-index: 9
+  }
+
+  .RotateScreen-texts {
+    position: relative
+  }
+
+  .RotateScreen-text {
+    color: #fff;
+    font-size: 10px;
+    width: 100%;
+    text-align: center
+  }
+
+  .RotateScreen-text b {
+    weight: normal
+  }
+
+  .RotateScreen-text--en,
+  .RotateScreen-text--fr {
+    position: absolute;
+    opacity: 0
+  }
+
+  .Scrollbar {
+    position: fixed;
+    width: 15px;
+    height: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    background-color: transparent
+  }
+
+  .Scrollbar-handle {
+    background-color: #8e8d8d;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    width: 3px;
+    height: calc(100% - 2px);
+    border-radius: 3px
   }
 
   .Timeline {
     width: 100%;
     height: 16px;
-    z-index: 4;
+    z-index: 4
+  }
+
+  .Timeline.is-dragging>.Timeline-arrow,
+  .Timeline.is-hover>.Timeline-arrow {
+    opacity: 0
+  }
+
+  .Timeline.is-dragging>.Timeline-dot,
+  .Timeline.is-hover>.Timeline-dot {
+    opacity: .7
+  }
+
+  .Timeline.is-dragging .Timeline-wrapper {
+    transition: none
+  }
+
+  .Timeline.is-dragging .Timeline-handle .Timeline-arrow--left {
+    -webkit-transform: translateX(3px) scaleX(-1);
+    -ms-transform: translateX(3px) scaleX(-1);
+    transform: translateX(3px) scaleX(-1)
+  }
+
+  .Timeline.is-dragging .Timeline-handle .Timeline-arrow--right {
+    -webkit-transform: translateX(-3px);
+    -ms-transform: translateX(-3px);
+    transform: translateX(-3px)
   }
 
   .Timeline>.Timeline-arrow {
-    pointer-events: auto;
+    pointer-events: auto
   }
 
   .Timeline-dot {
@@ -426,15 +1671,15 @@
     margin-top: -1px;
     fill: #fff;
     opacity: 0;
-    stroke: none;
+    stroke: none
   }
 
   .Timeline-dot--left {
-    left: 8px;
+    left: 8px
   }
 
   .Timeline-dot--right {
-    right: 8px;
+    right: 8px
   }
 
   .Timeline-arrow {
@@ -447,7 +1692,7 @@
     height: 100%;
     pointer-events: none;
     transition: opacity .4s cubic-bezier(.23, 1, .32, 1), -webkit-transform .4s cubic-bezier(.23, 1, .32, 1);
-    transition: opacity .4s cubic-bezier(.23, 1, .32, 1), transform .4s cubic-bezier(.23, 1, .32, 1);
+    transition: opacity .4s cubic-bezier(.23, 1, .32, 1), transform .4s cubic-bezier(.23, 1, .32, 1)
   }
 
   .Timeline-arrow svg {
@@ -460,23 +1705,30 @@
     bottom: 0;
     margin: auto;
     fill: #fff;
-    stroke: none;
+    stroke: none
   }
 
   .Timeline-arrow--left {
     left: 0;
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
-    transform: scaleX(-1);
+    transform: scaleX(-1)
   }
 
   .Timeline-arrow--right {
-    right: 0;
+    right: 0
   }
 
   .Timeline-dots {
     width: calc(100% - 38px);
-    left: 19px;
+    left: 19px
+  }
+
+  .Timeline-wrapper {
+    width: calc(100% - 58px);
+    transition: -webkit-transform .6s cubic-bezier(.86, 0, .07, 1);
+    transition: transform .6s cubic-bezier(.86, 0, .07, 1);
+    pointer-events: none
   }
 
   .Timeline-handle {
@@ -487,30 +1739,30 @@
     height: 100%;
     pointer-events: auto;
     cursor: -webkit-grab;
-    cursor: grab;
+    cursor: grab
   }
 
   .Timeline-mask,
   .WorkPreview.is-hidden {
-    pointer-events: none;
+    pointer-events: none
   }
 
   .Timeline-handle .Timeline-arrow {
-    opacity: 0;
+    opacity: 0
   }
 
   .Timeline-handle .Timeline-arrow--left {
     left: -19px;
     -webkit-transform: translateX(19px) scaleX(-1);
     -ms-transform: translateX(19px) scaleX(-1);
-    transform: translateX(19px) scaleX(-1);
+    transform: translateX(19px) scaleX(-1)
   }
 
   .Timeline-handle .Timeline-arrow--right {
     right: -19px;
     -webkit-transform: translateX(-19px);
     -ms-transform: translateX(-19px);
-    transform: translateX(-19px);
+    transform: translateX(-19px)
   }
 
   .TimelineHandle-hitArea {
@@ -518,39 +1770,39 @@
     left: -12px;
     top: -12px;
     width: calc(100% + 24px);
-    height: calc(100% + 24px);
+    height: calc(100% + 24px)
   }
 
   .is-desktop .Timeline-handle:active {
     cursor: -webkit-grabbing;
-    cursor: grabbing;
+    cursor: grabbing
   }
 
   .is-desktop .Timeline-handle:hover .Timeline-arrow {
-    opacity: 1;
+    opacity: 1
   }
 
   .is-desktop .Timeline-handle:hover .Timeline-arrow--left {
     -webkit-transform: translateX(0) scaleX(-1);
     -ms-transform: translateX(0) scaleX(-1);
-    transform: translateX(0) scaleX(-1);
+    transform: translateX(0) scaleX(-1)
   }
 
   .is-desktop .Timeline-handle:hover .Timeline-arrow--right {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
-    transform: translateX(0);
+    transform: translateX(0)
   }
 
   .is-desktop .TimelineHandle-hitArea {
-    display: none;
+    display: none
   }
 
   .TimelineHandle-block {
     position: absolute;
     left: 0;
     top: 0;
-    pointer-events: none;
+    pointer-events: none
   }
 
   .WorkPreview,
@@ -558,39 +1810,57 @@
     position: relative;
     display: inline-block;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: middle
   }
 
   .TimelineHandle-block p {
     font-size: 12px;
     line-height: 16px;
     text-align: center;
-    user-select: none;
+    user-select: none
   }
 
   .TimelineHandle-block--dark {
-    background-color: #262626;
+    background-color: #262626
   }
 
   .TimelineHandle-block--light {
-    background-color: #fff;
+    background-color: #fff
   }
 
   .TimelineHandle-block--light p {
-    color: #000;
+    color: #000
   }
 
   .Timeline-mask--outer {
     overflow: hidden;
     -webkit-transform: translateX(-101%);
     -ms-transform: translateX(-101%);
-    transform: translateX(-101%);
+    transform: translateX(-101%)
   }
 
   .Timeline-mask--inner {
     -webkit-transform: translateX(101%);
     -ms-transform: translateX(101%);
-    transform: translateX(101%);
+    transform: translateX(101%)
+  }
+
+  .is-phone .Timeline {
+    height: 12px
+  }
+
+  .is-phone .Timeline-arrow svg {
+    width: 3px;
+    height: 6px
+  }
+
+  .is-phone .Timeline-handle {
+    width: 45px
+  }
+
+  .is-phone .TimelineHandle-block p {
+    font-size: 9px;
+    line-height: 14px
   }
 
   .WorkPreview {
@@ -598,37 +1868,37 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none
   }
 
   .WorkPreview:before {
     display: inline-block;
     vertical-align: middle;
-    height: 100%;
+    height: 100%
   }
 
   .WorkPreview-cover {
     z-index: 1;
-    width: 100%;
+    width: 100%
   }
 
   .WorkPreview-cover:after {
     padding-top: 47.25%;
-    display: block;
+    display: block
   }
 
   .WorkPreview-cover img {
-    z-index: 2;
+    z-index: 2
   }
 
   .WorkPreview-cover video {
-    z-index: 1;
+    z-index: 1
   }
 
   .WorkPreview-content {
     width: 84%;
     left: 8%;
-    position: absolute;
+    position: absolute
   }
 
   .WorkPreview-content img,
@@ -636,23 +1906,23 @@
     width: 102%;
     height: 102%;
     left: -1%;
-    top: -1%;
+    top: -1%
   }
 
   .WorkPreview-video {
     z-index: 2;
-    display: none;
+    display: none
   }
 
   .is-desktop .WorkPreview-video {
-    display: block;
+    display: block
   }
 
   .WorkPreview-title {
     position: absolute;
     z-index: 3;
     left: 0;
-    top: calc(50% - 67px);
+    top: calc(50% - 67px)
   }
 
   .WorkPreview-title h1 {
@@ -660,39 +1930,56 @@
     font-size: 80px;
     line-height: 80px;
     text-align: left;
-    white-space: initial;
+    white-space: initial
   }
 
   .WorkPreview-title .line--inner {
     display: inline-block;
     -webkit-transform: translateY(120%);
     -ms-transform: translateY(120%);
-    transform: translateY(120%);
+    transform: translateY(120%)
   }
 
   .is-desktop .WorkPreview-title {
-    margin-left: -5px;
+    margin-left: -5px
   }
 
   @media (max-width:1279px) {
     .is-desktop .WorkPreview-title h1 {
       font-size: 70px;
-      line-height: 70px;
+      line-height: 70px
     }
   }
 
-  /*! CSS Used fontfaces */
-  @font-face {
-    font-family: GothamNarrow-Medium;
-    src: url(http://thieb.co/assets/fonts/GothamNarrow-Medium.woff) format("woff"), url(http://thieb.co/assets/fonts/GothamNarrow-Medium.ttf) format("truetype");
-    font-weight: 400;
-    font-style: normal;
+  .is-phone .WorkPreview {
+    width: 71.42857%
   }
 
-  @font-face {
-    font-family: GothamNarrow-Book;
-    src: url(http://thieb.co/assets/fonts/GothamNarrow-Book.woff) format("woff"), url(http://thieb.co/assets/fonts/GothamNarrow-Book.ttf) format("truetype");
-    font-weight: 400;
-    font-style: normal;
+  .is-phone .WorkPreview-cover {
+    height: 100%
+  }
+
+  .is-phone .WorkPreview-cover img {
+    width: auto
+  }
+
+  .is-phone .WorkPreview-title {
+    height: 100%;
+    top: 17px
+  }
+
+  .is-phone .WorkPreview-title h1 {
+    font-size: 38px;
+    line-height: 38px;
+    max-width: 220px
+  }
+
+  .is-phone .WorkPreview-content {
+    width: 90%;
+    left: 5%
+  }
+
+  .is-device .WorkPreview video {
+    display: none
   }
 </style>
