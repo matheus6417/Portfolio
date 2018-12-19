@@ -198,7 +198,8 @@
   h6,
   hr,
   p {
-    margin: 0
+    margin: 0;
+    color: white
   }
 
   .u-inlineList {
@@ -432,8 +433,7 @@
 
   .App {
     position: relative;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: auto;
     -webkit-overflow-scrolling: touch
   }
 
