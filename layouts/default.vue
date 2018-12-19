@@ -363,20 +363,6 @@
     display: inline-block
   }
 
-  @font-face {
-    font-family: GothamNarrow-Medium;
-    src: url(~/static/fonts/GothamNarrow-Medium.woff) format("woff"), url(~/static/fonts/GothamNarrow-Medium.woff2) format("woff2"), url(~/static/fonts/GothamNarrow-Medium.ttf) format("truetype");
-    font-weight: 400;
-    font-style: normal
-  }
-
-  @font-face {
-    font-family: GothamNarrow-Book;
-    src: url(~/static/fonts/GothamNarrow-Book.woff) format("woff"), url(~/static/fonts/GothamNarrow-Book.woff2) format("woff2"), url(~/static/fonts/GothamNarrow-Book.ttf) format("truetype");
-    font-weight: 400;
-    font-style: normal
-  }
-
   .About a,
   .About em,
   .About span,

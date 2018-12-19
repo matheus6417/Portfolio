@@ -1,9 +1,9 @@
 <template>
   <div class="">
     <div class="Header">
-      <a
+      <nuxt-link
         class="Header-logo"
-        href="/"
+        to="/"
         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"
       >
         <svg
@@ -96,7 +96,7 @@
             />
           </g>
         </svg>
-      </a>
+      </nuxt-link>
       <div class="Header-menuButtonArea u-hitArea"></div>
       <svg
         class="Header-menuButton"
