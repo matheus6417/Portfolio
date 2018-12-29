@@ -2,19 +2,22 @@
   <section>
     <Header />
     <Footer />
-    <h1>projectss</h1>
+    <h1>projects</h1>
+    <Carousel />
   </section>
 </template>
 <script>
   import Header from '~/components/Header.vue'
   import Footer from '~/components/Footer.vue'
-
+  import Carousel from '~/components/Carousel.vue'
   export default {
     components: {
       Header,
-      Footer
+      Footer,
+      Carousel
     }
   }
+
 </script>
 <style>
   .container {
@@ -46,4 +49,5 @@
   .links {
     padding-top: 15px;
   }
+
 </style>
