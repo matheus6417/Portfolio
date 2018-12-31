@@ -79,7 +79,8 @@ module.exports = {
     src: '~/plugins/swiper.js',
     ssr: false
   }, {
-    src: '~/plugins/slider.js',
+    src: '~/plugins/vue-slider-component.js',
+    ssr: false
   }, ],
 
   /*

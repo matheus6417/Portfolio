@@ -9,12 +9,12 @@
 <script>
   import Header from '~/components/Header.vue'
   import Footer from '~/components/Footer.vue'
-  import Slider from '~/components/Slider.vue'
+  import VueSliderComponent from '~/components/VueSliderComponent.vue'
   export default {
     components: {
       Header,
       Footer,
-      Slider
+      VueSliderComponent
     }
   }
 

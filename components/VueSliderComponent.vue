@@ -1,13 +1,19 @@
 ﻿<template>
   <div>
-    <div
-      v-slider:mySlider="sliderOption"
-      v-bind="options"
-    ></div>
+    <no-ssr placeholder="Loading...">
+      <div
+        v-slider:mySlider="sliderOption"
+        v-bind="options"
+      ></div>
+    </no-ssr>
   </div>
 </template>
 <script>
+  import NoSSR from 'vue-no-ssr'
   export default {
+    components: {
+    NoSSR
+  },
     data() {
       return {
         value: 0,
@@ -1264,12 +1270,12 @@
 </script>
 <style>
   .vue-slider-component {
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     bottom: 150px;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;  
+    margin: 0 auto;
     box-sizing: border-box;
     user-select: none;
     -webkit-user-select: none;
