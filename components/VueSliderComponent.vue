@@ -1270,11 +1270,11 @@
 </script>
 <style>
   .vue-slider-component {
-    /* position: fixed; */
+    /* position: fixed;
     display: flex;
     bottom: 150px;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin: 0 auto;
     box-sizing: border-box;
     user-select: none;

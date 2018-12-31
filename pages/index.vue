@@ -3,7 +3,7 @@
     <Header />
     <Footer />
     <h1>home</h1>
-    <Slider />
+    <VueSliderComponent />
   </section>
 </template>
 <script>
