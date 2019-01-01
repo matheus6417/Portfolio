@@ -1,64 +1,4 @@
 ﻿<template>
-  <div>
-    <no-ssr placeholder="Loading...">
-      <div
-        v-slider:mySlider="sliderOption"
-        v-bind="options"
-      ></div>
-    </no-ssr>
-  </div>
-</template>
-<script>
-  import NoSSR from 'vue-no-ssr'
-  export default {
-    components: {
-    NoSSR
-  },
-    data() {
-      return {
-        value: 0,
-        options: {
-          data: null,
-          eventType: 'auto',
-          width: 'auto',
-          height: 6,
-          dotSize: 16,
-          dotHeight: null,
-          dotWidth: null,
-          min: 0,
-          max: 20,
-          interval: 1,
-          show: true,
-          speed: 0.5,
-          disabled: false,
-          piecewise: false,
-          usdKeyboard: false,
-          enableCross: true,
-          piecewiseStyle: false,
-          piecewiseLabel: false,
-          tooltip: 'always',
-          tooltipDir: 'top',
-          reverse: false,
-          data: null,
-          clickable: true,
-          realTime: false,
-          lazy: false,
-          formatter: null,
-          bgStyle: null,
-          sliderStyle: null,
-          processStyle: null,
-          piecewiseActiveStyle: null,
-          piecewiseStyle: null,
-          tooltipStyle: null,
-          labelStyle: null,
-          labelActiveStyle: null
-        }
-      }
-    }
-  }
-
-</script>
-<template>
   <div
     ref="wrap"
     :class="['vue-slider-component', flowDirection, disabledClass, stateClass, { 'vue-slider-has-label': piecewiseLabel }]"
@@ -66,6 +6,12 @@
     :style="[wrapStyles, boolDisabled ? disabledStyle : null]"
     @click="wrapClick"
   >
+    <div class="content-wrap">
+      <h1
+        class="text"
+        v-bind:class="val"
+      >{{val}}</h1>
+    </div>
     <div
       ref="elem"
       aria-hidden="true"
@@ -301,7 +247,7 @@
     return value => Math.round(value * r) / r
   })()
   export default {
-    name: 'VueSliderComponent',
+    name: 'Slider',
     props: {
       width: {
         type: [Number, String],
@@ -309,11 +255,14 @@
       },
       height: {
         type: [Number, String],
-        default: 6
+        default: 2
       },
       data: {
         type: Array,
-        default: null
+        default: ["w", "b", "c", "sadasdsa", "asd", "sdf", "fsd", "ww", "s", "a", "b", "c", "sadasdsa", "asd", "sdf",
+          "fsd", "ww", "s", "a", "b", "c", "modern", "asd", "sdf", "fsd", "ww", "s", "a", "b", "c", "sadasdsa", "asd",
+          "sdf", "fsd", "ww", "s"
+        ]
       },
       dotSize: {
         type: Number,
@@ -326,14 +275,6 @@
       dotHeight: {
         type: Number,
         required: false
-      },
-      min: {
-        type: Number,
-        default: 0
-      },
-      max: {
-        type: Number,
-        default: 100
       },
       interval: {
         type: Number,
@@ -353,7 +294,7 @@
       },
       tooltip: {
         type: [String, Boolean],
-        default: 'always'
+        default: 'false'
       },
       eventType: {
         type: String,
@@ -369,7 +310,7 @@
       },
       lazy: {
         type: Boolean,
-        default: false
+        default: true
       },
       clickable: {
         type: Boolean,
@@ -377,7 +318,7 @@
       },
       speed: {
         type: Number,
-        default: 0.5
+        default: 0.1
       },
       realTime: {
         type: Boolean,
@@ -389,7 +330,7 @@
       },
       value: {
         type: [String, Number, Array, Object],
-        default: 0
+        default: "modern"
       },
       piecewiseLabel: {
         type: Boolean,
@@ -438,7 +379,11 @@
         type: Boolean,
         default: true
       },
-      sliderStyle: [Array, Object, Function],
+      sliderStyle: [{
+        "backgroundColor": "#f05b72"
+      }, {
+        "backgroundColor": "#3498db"
+      }],
       focusStyle: [Array, Object, Function],
       tooltipDir: [Array, String],
       formatter: [String, Function],
@@ -448,7 +393,6 @@
       piecewiseActiveStyle: Object,
       processStyle: Object,
       bgStyle: Object,
-      tooltipStyle: [Array, Object, Function],
       disabledDotStyle: [Array, Object, Function],
       labelStyle: Object,
       labelActiveStyle: Object
