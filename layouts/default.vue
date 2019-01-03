@@ -3,413 +3,77 @@
     class="App u-fullSize"
     v-bind:class="frontState""
   >
-    <h1>{{frontState}}</h1>
+<h1>class on watch > {{frontState}}</h1>
     <nuxt />
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
   export default {
-    computed: {
-      frontState() {
-        return this.$nuxt.$store.state.frontState;
-      }
+    
+    computed:
+    {
+     
+      ...mapState([
+        'frontState'
+      ]
+      ),
+      // handler() { 
+      //   // this.$store.commit('UPDATE','aaa');
+      //   return this.$store.state.frontState; },
+     
+      
+    },
+ 
+
     }
-  }
-
-</script>
-<style>
-  .u-inactive,
-  [hidden] {
-    display: none !important
-  }
-
-  .Intro,
-  .u-unselectable {
-    -moz-user-select: none;
-    -ms-user-select: none
-  }
-
-  .u-hidden,
-  .u-unclickable {
-    pointer-events: none
-  }
-
-  .Intro,
-  .Intro-loader,
-  .Intro-progress,
-  .Intro-text,
-  .u-resetBtn,
-  .u-table-cell--center,
-  .u-vCenter-parent {
-    text-align: center
-  }
-
-  .u-centerBg,
-  :not(body) {
-    background-repeat: no-repeat
-  }
-
-  .u-resetBtn,
-  a {
-    text-decoration: none
-  }
-
-  .u-resestBtn--withoutOutline,
-  a,
-  button {
-    outline: 0
-  }
-
-  .u-fullParent,
-  .u-middle--abs,
-  .u-topCorner,
-  .u-topCorner--right {
-    top: 0;
-    position: absolute
-  }
-
-  html {
-    border-collapse: collapse;
-    line-height: 1
-  }
-
-  * {
-    border-collapse: inherit
-  }
-
-  :not(body) {
-    background-position: 50%;
-    background-size: cover
-  }
-
-  body,
-  html {
-    padding: 0;
-    margin: 0
-  }
-
-  menu,
-  ol,
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none
-  }
-
-  li,
-  p,
-  small {
-    margin: 0;
-    padding: 0
-  }
-
-  a {
-    color: inherit
-  }
-
-  figure,
-  form {
-    margin: 0
-  }
-
-  fieldset {
-    border: none;
-    margin: 0;
-    padding: 0
-  }
-
-  .u-inactive {
-    visibility: hidden !important
-  }
-
-  .Header.is-work .HeaderNav-works--regular,
-  .Intro-progress .sizing,
-  .Intro-text--sizing,
-  .u-hidden {
-    visibility: hidden
-  }
-
-  .u-visuallyHidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    border: 0;
-    color: #757575
-  }
-
-  .u-visuallyHidden--focusable:active,
-  .u-visuallyHidden--focusable:focus {
-    position: static;
-    width: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    opacity: 0
-  }
-
-  .u-unselectable {
-    cursor: default;
-    -webkit-user-select: none
-  }
-
-  .u-unclickable {
-    cursor: default
-  }
-
-  .u-fullParent,
-  .u-fullSize {
-    width: 100%;
-    height: 100%
-  }
-
-  .u-fullParent {
-    left: 0
-  }
-
-  .u-fluid--w {
-    width: 100%;
-    height: auto
-  }
-
-  .u-fluid--h {
-    width: auto;
-    height: 100%
-  }
-
-  .u-topCorner--right {
-    right: 0
-  }
-
-  .u-center--rel {
-    display: block;
-    margin: auto
-  }
-
-  .u-center--abs {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto
-  }
-
-  .u-middle--abs {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  hr,
-  p {
-    margin: 0;
-    color: white
-  }
-
-  .u-inlineList {
-    position: relative
-  }
-
-  .u-inlineList-item,
-  .u-inlineList-item--bottom,
-  .u-inlineList-item--middle,
-  .u-inlineList-item--top {
-    position: relative;
-    display: inline-block
-  }
-
-  .u-inlineList-item--top {
-    vertical-align: top
-  }
-
-  .u-inlineList-item--middle {
-    vertical-align: middle
-  }
-
-  .u-inlineList-item--bottom {
-    vertical-align: bottom
-  }
-
-  .u-table-cell--center,
-  .u-table-cell--middle,
-  .u-vCenter {
-    vertical-align: middle
-  }
-
-  .u-table {
-    display: table
-  }
-
-  .u-table-cell,
-  .u-table-cell--center,
-  .u-table-cell--middle {
-    display: table-cell
-  }
-
-  .u-cf {
-    zoom: 1
-  }
-
-  .u-cf:after,
-  .u-cf:before {
-    content: "
-    ";
-    display: table
-  }
-
-  .u-cf:after {
-    clear: both
-  }
-
-  .u-centerBg {
-    background-size: 100%;
-    background-position: center
-  }
-
-  .u-antialiasing {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased
-  }
-
-  .u-resetBtn {
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
-    background: 0 0;
-    color: inherit;
-    font: inherit;
-    line-height: normal;
-    cursor: pointer;
-    white-space: normal;
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
-    -webkit-appearance: none
-  }
-
-  .About h1,
-  .About-socials,
-  .Intro-text,
-  .u-vCenter-parent {
-    white-space: nowrap
-  }
-
-  .u-resetBtn:not(input) {
-    user-select: none
-  }
-
-  .u-resetBtn::-moz-focus-inner {
-    border: 0;
-    padding: 0
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-weight: 400
-  }
-
-  hr {
-    border: 0
-  }
-
-  button {
-    border: none;
-    padding: 0
-  }
-
-  html {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
-  }
-
-  body {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%
-  }
-
-  *,
-  :after,
-  :before {
-    box-sizing: inherit
-  }
-
-  .View {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%
-  }
-
-  .u-hitArea {
-    background: transparent;
-    background-size: 100%;
-    cursor: pointer;
-    z-index: 2
-  }
-
-  .u-vCenter-parent {
-    height: 100%
-  }
-
-  .u-vCenter-parent:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle
-  }
-
-  .u-vCenter {
-    display: inline-block
-  }
-
-  .About a,
-  .About em,
-  .About span,
-  .Work-awards li.is-me,
-  .Work-awards li.is-me span,
-  .Work-credits li.is-me,
-  .Work-credits li.is-me span,
-  .Work-description a,
-  .Work-intro,
-  .Work-linkout,
-  .Work-nav {
-    font-family: GothamNarrow-Bold
-  }
-
-  .About h1,
-  .Footer-lang button,
-  .Header-nav,
-  .Intro-progress,
-  .Menu-links,
-  .RotateScreen-text b,
-  .TimelineHandle-block p,
-  .Work-awards h3,
-  .Work-awards li,
-  .Work-awards li span,
-  .Work-credits h3,
-  .Work-credits li,
-  .Work-credits li span,
-  .Work-infos p,
-  .Work-title h1,
-  .WorkPreview-title h1 {
-    font-family: GothamNarrow-Medium, -apple-system, "
-    .SFNSText-Regular", "San Francisco"
+    </script>
+    <style
+  > .u-inactive, [hidden] { display: none !important } .Intro, .u-unselectable { -moz-user-select: none;
+    -ms-user-select: none } 
+    .u-hidden, .u-unclickable { pointer-events: none } .Intro, .Intro-loader, .Intro-progress,
+    .Intro-text, .u-resetBtn, .u-table-cell--center, .u-vCenter-parent { text-align: center } .u-centerBg, :not(body) {
+    background-repeat: no-repeat } .u-resetBtn, a { text-decoration: none } .u-resestBtn--withoutOutline, a, button {
+    outline: 0 } .u-fullParent, .u-middle--abs, .u-topCorner, .u-topCorner--right { top: 0; position: absolute } html {
+    border-collapse: collapse; line-height: 1 } * { border-collapse: inherit } :not(body) { background-position: 50%;
+    background-size: cover } body, html { padding: 0; margin: 0 } menu, ol, ul { margin: 0; padding: 0; list-style:
+    none } li, p, small { margin: 0; padding: 0 } a { color: inherit } figure, form { margin: 0 } fieldset { border:
+    none; margin: 0; padding: 0 } .u-inactive { visibility: hidden !important } .Header.is-work
+    .HeaderNav-works--regular, .Intro-progress .sizing, .Intro-text--sizing, .u-hidden { visibility: hidden }
+    .u-visuallyHidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:
+    rect(0 0 0 0); border: 0; color: #757575 } .u-visuallyHidden--focusable:active, .u-visuallyHidden--focusable:focus
+    { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; opacity: 0 }
+    .u-unselectable { cursor: default; -webkit-user-select: none } .u-unclickable { cursor: default } .u-fullParent,
+    .u-fullSize { width: 100%; height: 100% } .u-fullParent { left: 0 } .u-fluid--w { width: 100%; height: auto }
+    .u-fluid--h { width: auto; height: 100% } .u-topCorner--right { right: 0 } .u-center--rel { display: block; margin:
+    auto } .u-center--abs { position: absolute; left: 0; right: 0; margin: auto } .u-middle--abs { bottom: 0; left: 0;
+    right: 0; margin: auto } h1, h2, h3, h4, h5, h6, hr, p { margin: 0; color: white } .u-inlineList { position:
+    relative } .u-inlineList-item, .u-inlineList-item--bottom, .u-inlineList-item--middle, .u-inlineList-item--top {
+    position: relative; display: inline-block } .u-inlineList-item--top { vertical-align: top }
+    .u-inlineList-item--middle { vertical-align: middle } .u-inlineList-item--bottom { vertical-align: bottom }
+    .u-table-cell--center, .u-table-cell--middle, .u-vCenter { vertical-align: middle } .u-table { display: table }
+    .u-table-cell, .u-table-cell--center, .u-table-cell--middle { display: table-cell } .u-cf { zoom: 1 } .u-cf:after,
+    .u-cf:before { content: "
+    "; display: table } .u-cf:after { clear: both } .u-centerBg { background-size: 100%;
+    background-position: center } .u-antialiasing { text-rendering: optimizeLegibility; -webkit-font-smoothing:
+    antialiased } .u-resetBtn { border: none; margin: 0; padding: 0; width: auto; overflow: visible; background: 0 0;
+    color: inherit; font: inherit; line-height: normal; cursor: pointer; white-space: normal; -webkit-font-smoothing:
+    inherit; -moz-osx-font-smoothing: inherit; -webkit-appearance: none } .About h1, .About-socials, .Intro-text,
+    .u-vCenter-parent { white-space: nowrap } .u-resetBtn:not(input) { user-select: none }
+    .u-resetBtn::-moz-focus-inner { border: 0; padding: 0 } h1, h2, h3, h4, h5 { font-weight: 400 } hr { border: 0 }
+    button { border: none; padding: 0 } html { box-sizing: border-box; -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale } body { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;
+    text-size-adjust: 100% } *, :after, :before { box-sizing: inherit } .View { position: absolute; left: 0; top: 0;
+    width: 100% } .u-hitArea { background: transparent; background-size: 100%; cursor: pointer; z-index: 2 }
+    .u-vCenter-parent { height: 100% } .u-vCenter-parent:before { content: ''; display: inline-block; height: 100%;
+    vertical-align: middle } .u-vCenter { display: inline-block } .About a, .About em, .About span, .Work-awards
+    li.is-me, .Work-awards li.is-me span, .Work-credits li.is-me, .Work-credits li.is-me span, .Work-description a,
+    .Work-intro, .Work-linkout, .Work-nav { font-family: GothamNarrow-Bold } .About h1, .Footer-lang button,
+    .Header-nav, .Intro-progress, .Menu-links, .RotateScreen-text b, .TimelineHandle-block p, .Work-awards h3,
+    .Work-awards li, .Work-awards li span, .Work-credits h3, .Work-credits li, .Work-credits li span, .Work-infos p,
+    .Work-title h1, .WorkPreview-title h1 { font-family: GothamNarrow-Medium, -apple-system, "
+    .SFNSText-Regular", "San
+    Francisco"
     , "Roboto"
     , "Segoe UI"
     , "Helvetica Neue"

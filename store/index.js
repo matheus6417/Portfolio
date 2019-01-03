@@ -1,9 +1,9 @@
 ﻿export const state = () => ({
-  frontState: "fsdfdsfsdfsd"
+  frontState: "default"
 })
 
 export const mutations = {
-  update(state) {
-    state.testeEstado = state
+  UPDATE(state, value) {
+    state.frontState = value;
   }
 }

@@ -686,7 +686,7 @@
     },
     watch: {
       value(val) {
-        this.flag || this.setValue(val, true)
+        this.flag || this.setValue(val, true);
       },
       max(val) {
         if (val < this.min) {
@@ -950,6 +950,7 @@
           }
         }
         this.crossFlag = false
+        this.$store.commit('UPDATE', this.val);
       },
       isLessRange(pos, index) {
         if (!this.isRange || (!this.minRange && !this.maxRange)) {
