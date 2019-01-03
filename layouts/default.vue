@@ -1,31 +1,31 @@
 <template>
-  <div
-    class="App u-fullSize"
-    v-bind:class="frontState""
-  >
-<h1>class on watch > {{frontState}}</h1>
+  <div class="App u-fullSize" v-bind:class="frontState">
+  <Header />
     <nuxt />
+    <Footer />
   </div>
 </template>
 <script>
 import { mapState } from 'vuex'
+ import Header from '~/components/Header.vue'
+  import Footer from '~/components/Footer.vue'
   export default {
-    
+  components: {
+      Header,
+      Footer,
+      Slider
+    },
     computed:
     {
-     
+
       ...mapState([
         'frontState'
       ]
       ),
-      // handler() { 
+      // handler() {
       //   // this.$store.commit('UPDATE','aaa');
       //   return this.$store.state.frontState; },
-     
-      
     },
- 
-
     }
     </script>
     <style
@@ -34,13 +34,13 @@ import { mapState } from 'vuex'
     transition: all 0.2s;
   }
   .style-none{
- 
+
     background: red;
   }
-  
-  
+
+
    .u-inactive, [hidden] { display: none !important } .Intro, .u-unselectable { -moz-user-select: none;
-    -ms-user-select: none } 
+    -ms-user-select: none }
     .u-hidden, .u-unclickable { pointer-events: none } .Intro, .Intro-loader, .Intro-progress,
     .Intro-text, .u-resetBtn, .u-table-cell--center, .u-vCenter-parent { text-align: center } .u-centerBg, :not(body) {
     background-repeat: no-repeat } .u-resetBtn, a { text-decoration: none } .u-resestBtn--withoutOutline, a, button {
@@ -63,8 +63,7 @@ import { mapState } from 'vuex'
     .u-inlineList-item--middle { vertical-align: middle } .u-inlineList-item--bottom { vertical-align: bottom }
     .u-table-cell--center, .u-table-cell--middle, .u-vCenter { vertical-align: middle } .u-table { display: table }
     .u-table-cell, .u-table-cell--center, .u-table-cell--middle { display: table-cell } .u-cf { zoom: 1 } .u-cf:after,
-    .u-cf:before { content: "
-    "; display: table } .u-cf:after { clear: both } .u-centerBg { background-size: 100%;
+    .u-cf:before { content: ""; display: table } .u-cf:after { clear: both } .u-centerBg { background-size: 100%;
     background-position: center } .u-antialiasing { text-rendering: optimizeLegibility; -webkit-font-smoothing:
     antialiased } .u-resetBtn { border: none; margin: 0; padding: 0; width: auto; overflow: visible; background: 0 0;
     color: inherit; font: inherit; line-height: normal; cursor: pointer; white-space: normal; -webkit-font-smoothing:
@@ -81,9 +80,7 @@ import { mapState } from 'vuex'
     .Work-intro, .Work-linkout, .Work-nav { font-family: GothamNarrow-Bold } .About h1, .Footer-lang button,
     .Header-nav, .Intro-progress, .Menu-links, .RotateScreen-text b, .TimelineHandle-block p, .Work-awards h3,
     .Work-awards li, .Work-awards li span, .Work-credits h3, .Work-credits li, .Work-credits li span, .Work-infos p,
-    .Work-title h1, .WorkPreview-title h1 { font-family: GothamNarrow-Medium, -apple-system, "
-    .SFNSText-Regular", "San
-    Francisco"
+    .Work-title h1, .WorkPreview-title h1 { font-family: GothamNarrow-Medium, -apple-system, " .SFNSText-Regular", "San Francisco"
     , "Roboto"
     , "Segoe UI"
     , "Helvetica Neue"
@@ -1338,7 +1335,7 @@ import { mapState } from 'vuex'
     position: relative } .MenuSocial svg { fill: #fff; opacity: .12 } .MenuSocial--twitter, .MenuSocial--vimeo { width:
     12px; height: 10px } .MenuSocial--dribbble, .MenuSocial--linkedin { width: 12px; height: 12px } .Noise { position:
     fixed } .RotateScreen { position: fixed; z-index: 9 } .RotateScreen-texts { position: relative } .RotateScreen-text
-    { color: #fff; font-size: 10px; width: 100%; text-align: center } .RotateScreen-text b { weight: normal }
+    { color: #fff; font-size: 10px; width: 100%; text-align: center } .RotateScreen-text b { font-weight: normal }
     .RotateScreen-text--en, .RotateScreen-text--fr { position: absolute; opacity: 0 } .Scrollbar { position: fixed;
     width: 15px; height: 0; top: 0; right: 0; z-index: 100; opacity: 0; background-color: transparent }
     .Scrollbar-handle { background-color: #8e8d8d; position: absolute; right: 2px; top: 2px; width: 3px; height:

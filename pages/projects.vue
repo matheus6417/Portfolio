@@ -7,13 +7,11 @@
   </section>
 </template>
 <script>
-  import Header from '~/components/Header.vue'
-  import Footer from '~/components/Footer.vue'
+
   import Carousel from '~/components/Carousel.vue'
   export default {
     components: {
-      Header,
-      Footer,
+
       Carousel
     }
   }
