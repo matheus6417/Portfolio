@@ -7,10 +7,6 @@
     @click="wrapClick"
   >
     <div class="content-wrap">
-      <h1
-        class="text"
-        v-bind:class="val"
-      >{{val}}</h1>
     </div>
     <div
       ref="elem"
@@ -259,26 +255,11 @@
       },
       data: {
         type: Array,
-        default: ["style__none",
-        "style__centering",
-        "style__system-font",
-        "style__spacing",
-         "style__colors-contrast",
-          "style__custom-font",
-           "style__logo",
-            "style__default",
-            "style__bigger-fonts",
-            "style__decorate-links",
-             "style__images-links",
-             "style__waving-fonts",
-             "style__brutalism-fonts",
-             "style__brutalism-images",
-             "style__brutalism-grid",
-             "style__brutalism-tuned",
-             "style__becoming-weird",
-             "style__enough",
-             "style__wtf",
-             "style__wtfwtf"
+        default: ["style__none", "style__centering", "style__system-font", "style__spacing", "style__colors-contrast",
+          "style__custom-font", "style__logo", "style__default", "style__bigger-fonts", "style__decorate-links",
+          "style__images-links", "style__waving-fonts", "style__brutalism-fonts", "style__brutalism-images",
+          "style__brutalism-grid", "style__brutalism-tuned", "style__becoming-weird", "style__enough", "style__wtf",
+          "style__wtfwtf"
         ]
       },
       dotSize: {
