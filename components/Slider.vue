@@ -259,9 +259,9 @@
       },
       data: {
         type: Array,
-        default: ["w", "b", "c", "sadasdsa", "asd", "sdf", "fsd", "ww", "s", "a", "b", "c", "sadasdsa", "asd", "sdf",
-          "fsd", "ww", "s", "a", "b", "c", "modern", "asd", "sdf", "fsd", "ww", "s", "a", "b", "c", "sadasdsa", "asd",
-          "sdf", "fsd", "ww", "s"
+        default: ["style-none", "b", "c", "sadasdsa", "asd", "sdf", "fsd", "ww", "s", "a", "b", "c", "sadasdsa", "asd",
+          "sdf", "fsd", "ww", "s", "a", "b", "c", "modern", "asd", "sdf", "fsd", "ww", "s", "a", "b", "c", "sadasdsa",
+          "asd", "sdf", "fsd", "ww", "s"
         ]
       },
       dotSize: {

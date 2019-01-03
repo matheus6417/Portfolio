@@ -29,7 +29,17 @@ import { mapState } from 'vuex'
     }
     </script>
     <style
-  > .u-inactive, [hidden] { display: none !important } .Intro, .u-unselectable { -moz-user-select: none;
+  >
+  .App {
+    transition: all 0.2s;
+  }
+  .style-none{
+ 
+    background: red;
+  }
+  
+  
+   .u-inactive, [hidden] { display: none !important } .Intro, .u-unselectable { -moz-user-select: none;
     -ms-user-select: none } 
     .u-hidden, .u-unclickable { pointer-events: none } .Intro, .Intro-loader, .Intro-progress,
     .Intro-text, .u-resetBtn, .u-table-cell--center, .u-vCenter-parent { text-align: center } .u-centerBg, :not(body) {
@@ -44,7 +54,7 @@ import { mapState } from 'vuex'
     rect(0 0 0 0); border: 0; color: #757575 } .u-visuallyHidden--focusable:active, .u-visuallyHidden--focusable:focus
     { position: static; width: auto; height: auto; margin: 0; overflow: visible; clip: auto; opacity: 0 }
     .u-unselectable { cursor: default; -webkit-user-select: none } .u-unclickable { cursor: default } .u-fullParent,
-    .u-fullSize { width: 100%; height: 100% } .u-fullParent { left: 0 } .u-fluid--w { width: 100%; height: auto }
+    .u-fullSize { width: 100%; height: 100vh } .u-fullParent { left: 0 } .u-fluid--w { width: 100%; height: auto }
     .u-fluid--h { width: auto; height: 100% } .u-topCorner--right { right: 0 } .u-center--rel { display: block; margin:
     auto } .u-center--abs { position: absolute; left: 0; right: 0; margin: auto } .u-middle--abs { bottom: 0; left: 0;
     right: 0; margin: auto } h1, h2, h3, h4, h5, h6, hr, p { margin: 0; color: white } .u-inlineList { position:
