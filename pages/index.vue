@@ -1,13 +1,16 @@
 <template>
   <section>
-
+    <div>
+      <div class="copy-wrapper">
+        <h1 class="copy">Hi, asdasd sdjkas asidas.askdas</h1>
+      </div>
+    </div>
     <div class="slider-wrapper">
       <Slider />
     </div>
   </section>
 </template>
 <script>
-
   import Slider from '~/components/Slider.vue'
   export default {
     components: {
@@ -17,12 +20,4 @@
 
 </script>
 <style>
-  .slider-wrapper {
-    position: fixed;
-    bottom: 150px;
-    width: 90%;
-    margin-left: 50%;
-    transform: translateX(-50%)
-  }
-
 </style>

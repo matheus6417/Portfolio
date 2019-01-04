@@ -3,8 +3,9 @@
     <div
       class="Footer is-ready"
       style="opacity: 1;"
-    ><a
-        href="mailto:hello@thieb.co"
+    >
+      <!--<a
+        href="hello@matheuscezar.me"
         style=""
       >hello@matheuscezar.me</a>
       <div class="Footer-lang"> <button
@@ -15,7 +16,7 @@
           data-lang="pt"
           class=""
           style=""
-        >Pt</button> </div>
+        >Pt</button> </div> -->
     </div>
   </div>
 </template>

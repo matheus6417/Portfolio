@@ -97,106 +97,58 @@
           </g>
         </svg>
       </nuxt-link>
-      <div class="Header-menuButtonArea u-hitArea"></div>
-      <svg
-        class="Header-menuButton"
-        viewBox="0 0 44 32"
-      >
-        <rect
-          x="0"
-          y="4"
-          width="44"
-          height="3"
-        ></rect>
-        <rect
-          x="0"
-          y="16"
-          width="44"
-          height="3"
-        ></rect>
-      </svg>
+      <!-- <div class="Header-menuButtonArea u-hitArea"></div>
+        <svg
+          class="Header-menuButton"
+          viewBox="0 0 44 32"
+        >
+          <rect
+            x="0"
+            y="4"
+            width="44"
+            height="3"
+          ></rect>
+          <rect
+            x="0"
+            y="16"
+            width="44"
+            height="3"
+          ></rect>
+        </svg> -->
       <div
         class="Header-nav"
         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"
-      > <span>
-          <a
-            class="HeaderNav-works HeaderNav-works--regular is-active"
-            href="/"
-          >
-            <div class="Header-link Header-link--sizing">Home</div>
-            <div class="Header-link Header-link--regular">Home</div>
-            <div class="Header-link Header-link--hover">Home</div>
-          </a>
-          <a
-            class="HeaderNav-works HeaderNav-works--back"
-            href="/"
-          >
-            <div class="Header-link Header-link--sizing"><svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 176.4 44.3"
-              >
-                <path d="M172.4 18.1H13.7L25 6.8c1.6-1.6 1.6-4.1 0-5.7s-4.1-1.6-5.7 0L1.2 19.3c-.2.2-.4.4-.5.6-.1.1-.1.2-.2.3-.1.1-.2.3-.2.4 0 .1-.1.2-.1.4 0 .1-.1.3-.1.4-.1.2-.1.4-.1.6v.4c0 .2 0 .4.1.6 0 .1.1.3.1.4 0 .1.1.2.1.3.1.2.2.3.2.4 0 .1.1.2.1.2.2.3.4.5.6.7l18.1 18.1c.8.8 1.8 1.2 2.8 1.2s2-.4 2.8-1.2c1.6-1.6 1.6-4.1 0-5.7L13.7 26.1h158.7c2.2 0 4-1.8 4-4s-1.8-4-4-4"></path>
-              </svg><span>Back</span></div>
-            <div class="Header-link Header-link--regular"><svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 176.4 44.3"
-              >
-                <path d="M172.4 18.1H13.7L25 6.8c1.6-1.6 1.6-4.1 0-5.7s-4.1-1.6-5.7 0L1.2 19.3c-.2.2-.4.4-.5.6-.1.1-.1.2-.2.3-.1.1-.2.3-.2.4 0 .1-.1.2-.1.4 0 .1-.1.3-.1.4-.1.2-.1.4-.1.6v.4c0 .2 0 .4.1.6 0 .1.1.3.1.4 0 .1.1.2.1.3.1.2.2.3.2.4 0 .1.1.2.1.2.2.3.4.5.6.7l18.1 18.1c.8.8 1.8 1.2 2.8 1.2s2-.4 2.8-1.2c1.6-1.6 1.6-4.1 0-5.7L13.7 26.1h158.7c2.2 0 4-1.8 4-4s-1.8-4-4-4"></path>
-              </svg><span>Back</span></div>
-            <div class="Header-link Header-link--hover"><svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 176.4 44.3"
-              >
-                <path d="M172.4 18.1H13.7L25 6.8c1.6-1.6 1.6-4.1 0-5.7s-4.1-1.6-5.7 0L1.2 19.3c-.2.2-.4.4-.5.6-.1.1-.1.2-.2.3-.1.1-.2.3-.2.4 0 .1-.1.2-.1.4 0 .1-.1.3-.1.4-.1.2-.1.4-.1.6v.4c0 .2 0 .4.1.6 0 .1.1.3.1.4 0 .1.1.2.1.3.1.2.2.3.2.4 0 .1.1.2.1.2.2.3.4.5.6.7l18.1 18.1c.8.8 1.8 1.2 2.8 1.2s2-.4 2.8-1.2c1.6-1.6 1.6-4.1 0-5.7L13.7 26.1h158.7c2.2 0 4-1.8 4-4s-1.8-4-4-4"></path>
-              </svg><span>Back</span></div>
-          </a> </span> <a href="/projects">
-          <div class="Header-link Header-link--sizing">Projects</div>
-          <div class="Header-link Header-link--regular">Projects</div>
-          <div class="Header-link Header-link--hover">Projects</div>
+      >
+        <a href="/">
+          <div class="Header-link Header-link--regular">Home</div>
+        </a>
+        <a href="/work">
+          <div class="Header-link Header-link--regular">Work</div>
         </a> <a href="/about">
-          <div class="Header-link Header-link--sizing">About</div>
           <div class="Header-link Header-link--regular">About</div>
-          <div class="Header-link Header-link--hover">About</div>
         </a>
       </div>
     </div>
   </div>
 </template>
 <style>
-  .u-hitArea {
-    background: transparent;
-    background-size: 100%;
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  .Header {
-    width: 85%;
-    margin: 0 7%;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    position: fixed;
-    z-index: 10;
-    user-select: none;
-  }
-
-  .Header-menuButton,
-  .Header-menuButtonArea,
-  .is-desktop .Header-logo .underline {
+  .Header-logo {
+    width: 42px;
+    opacity: 0 !important;
     display: none;
   }
 
-  .Header-logo {
-    position: absolute;
-    left: -23px;
-    top: 56px;
-    width: 41px;
-    height: 34px;
-    opacity: 0;
+  .App:not(._none) .Header-logo {
+    opacity: 0 !important;
+    display: inline-block;
   }
 
-  .HeaderLogo-anim {
+  .App:not(._none):not(._centering):not(._system-font) .Header-logo {
+    opacity: 1 !important;
+    display: inline-block;
+  }
+
+  ._logo .HeaderLogo-anim {
     position: absolute;
     width: 14px;
     height: auto;
@@ -204,92 +156,59 @@
     top: 29px;
   }
 
-  .Header-nav {
-    position: absolute;
-    right: -9px;
-    top: 71px;
-    opacity: 0;
-    color: #fff;
-    font-size: 13px;
-  }
-
-  .Header-nav a,
-  .Header-nav span {
-    position: relative;
-  }
-
-  .Header-link,
-  .Header-nav svg {
-    top: 0;
-    position: absolute;
-  }
-
-  .Header-nav a {
-    display: inline-block;
-    margin-left: 27px;
-  }
-
-  .Header-nav a.is-active .Header-link {
-    color: #fff;
-  }
-
-  .Header-nav span a {
-    position: absolute;
-    right: 0;
-  }
-
-  .Header-nav svg {
-    width: 21px;
-    height: 5px;
-    left: -33px;
-    bottom: 0;
-    margin: auto 0;
-    -webkit-transform: translateY(-1.5px);
-    -ms-transform: translateY(-1.5px);
-    transform: translateY(-1.5px);
-    fill: #fff;
-  }
-
-  .Header-link--sizing {
-    position: relative;
-    visibility: hidden;
-  }
-
-  .Header-link--regular {
-    color: rgba(255, 255, 255, .2);
-  }
-
-  .HeaderNav-works--back .Header-link {
-    color: #fff;
-  }
-
-  .Header-link--hover {
-    opacity: 0;
-  }
-
-  .HeaderNav-works {
-    position: absolute;
-    top: 0;
-    right: 0;
-    white-space: nowrap;
-  }
-
-  .HeaderNav-works--regular {
-    visibility: visible;
-  }
-
-  .HeaderNav-works--back {
-    visibility: hidden;
-  }
-
-  .svglogo-matheuscezar #bluefilters {
+  ._logo .svglogo-matheuscezar #bluefilters {
     display: none;
   }
 
   .svglogo-matheuscezar path {
     fill: transparent !important;
     filter: none !important;
-    stroke: rgb(255, 255, 255) !important;
+    stroke: rgb(0, 0, 0) !important;
     stroke-width: 12px !important;
   }
+
+  .App:not(._none) .Header {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    position: fixed;
+    z-index: 10;
+    user-select:
+      none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    margin: 0;
+    padding: 0 1rem;
+    width: calc(100% - 2rem);
+  }
+
+  .App:not(._none) .Header-nav {
+    opacity: 0;
+    display: flex;
+  }
+
+  .App:not(._none) .Header-nav a,
+  .App:not(._none).Header-nav span {
+    position: relative;
+  }
+
+  .App:not(._none) .Header-link,
+  .App:not(._none) .Header-nav svg {
+    position: relative;
+  }
+
+  .App:not(._none) .Header-nav a {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  .u-hitArea {
+    background: transparent;
+    background-size: 100%;
+    cursor: pointer;
+    z-index: 2;
+  }
+
 </style>

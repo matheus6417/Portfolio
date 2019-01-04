@@ -6,6 +6,7 @@
     :style="[wrapStyles, boolDisabled ? disabledStyle : null]"
     @click="wrapClick"
   >
+    <h3>{{val}}</h3>
     <div class="content-wrap">
     </div>
     <div
@@ -255,11 +256,9 @@
       },
       data: {
         type: Array,
-        default: ["style__none", "style__centering", "style__system-font", "style__spacing", "style__colors-contrast",
-          "style__custom-font", "style__logo", "style__default", "style__bigger-fonts", "style__decorate-links",
-          "style__images-links", "style__waving-fonts", "style__brutalism-fonts", "style__brutalism-images",
-          "style__brutalism-grid", "style__brutalism-tuned", "style__becoming-weird", "style__enough", "style__wtf",
-          "style__wtfwtf"
+        default: ["_none", "_centering", "_system-font", "_spacing", "_colors-contrast", "_custom-font", "_logo",
+          "_default", "_bigger-fonts", "_decorate-links", "_images-links", "_waving-fonts", "_brutalism-fonts",
+          "_brutalism-images", "_brutalism-grid", "_brutalism-tuned", "_becoming-weird", "_enough", "_wtf", "_wtfwtf"
         ]
       },
       dotSize: {
@@ -328,7 +327,7 @@
       },
       value: {
         type: [String, Number, Array, Object],
-        default: "modern"
+        default: "_default"
       },
       piecewiseLabel: {
         type: Boolean,
@@ -1212,13 +1211,50 @@
 
 </script>
 <style>
+  .slider-wrapper {
+    position: fixed;
+    bottom: 3rem;
+    width: calc(100% - 2rem);
+    margin-left: 50%;
+    transform: translateX(-50%)
+  }
+
+  ._none .vue-slider-component .vue-slider-process,
+  ._centering .vue-slider-component .vue-slider-process,
+  ._system-font .vue-slider-component .vue-slider-process,
+  ._spacing .vue-slider-component .vue-slider-process {
+    position: absolute;
+    border-radius: 0;
+    background-color: #000;
+    transition: all 0s;
+    z-index: 1;
+  }
+
+  ._none .vue-slider-component .vue-slider-dot .vue-slider-dot-handle,
+  ._centering .vue-slider-component .vue-slider-dot .vue-slider-dot-handle {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-top-color: buttonface;
+    border-right-color: buttonface;
+    border-bottom-color: buttonface;
+    border-left-color: buttonface;
+    border-image: initial;
+  }
+
   .vue-slider-component {
-    /* position: fixed;
-    display: flex;
-    bottom: 150px;
-    justify-content: center;
-    align-items: center; */
-    margin: 0 auto;
     box-sizing: border-box;
     user-select: none;
     -webkit-user-select: none;
@@ -1239,13 +1275,12 @@
     cursor: not-allowed;
   }
 
-  .vue-slider-component .vue-slider {
+  /* .vue-slider-component .vue-slider {
     position: relative;
     display: block;
     border-radius: 15px;
     background-color: #ccc;
-  }
-
+  } */
   .vue-slider-component .vue-slider::after {
     content: '';
     position: absolute;
@@ -1256,14 +1291,13 @@
     z-index: 2;
   }
 
-  .vue-slider-component .vue-slider-process {
+  /* .vue-slider-component .vue-slider-process {
     position: absolute;
     border-radius: 15px;
     background-color: #3498db;
     transition: all 0s;
     z-index: 1;
-  }
-
+  } */
   .vue-slider-component .vue-slider-process.vue-slider-process-dragable {
     cursor: pointer;
     z-index: 3;
@@ -1307,14 +1341,14 @@
     z-index: 5;
   }
 
+  /* 
   .vue-slider-component .vue-slider-dot .vue-slider-dot-handle {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     background-color: #fff;
     box-shadow: 0.5px 0.5px 2px 1px rgba(0, 0, 0, 0.32);
-  }
-
+  } */
   .vue-slider-component .vue-slider-dot.vue-slider-dot-focus .vue-slider-dot-handle {
     box-shadow: 0 0 2px 1px #3498db;
   }

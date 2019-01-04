@@ -28,13 +28,61 @@
 
 </script>
 <style>
+  html,
+  body,
+  div,
+  form,
+  fieldset,
+  legend,
+  label {
+    margin: 0;
+    padding: 0;
+  }
+
+  body,
+  html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  th,
+  td,
+  caption {
+    font-weight: normal;
+    margin: 0px
+  }
+
+  img {
+    border: 0;
+  }
+
+  .App:not(._none) .copy-wrapper {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .App {
     transition: all 0.2s;
   }
 
-  .style-none {
-    background: red;
+  .App:not(._none):not(._centering) {
+    font-family: -apple-system, " .SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI",
+      "Helvetica Neue", "Lucida Grande", sans-serif
   }
+
+  /*
 
   .u-inactive,
   [hidden] {
@@ -463,17 +511,7 @@
       sans-serif
   }
 
-  body,
-  html {
-    width:
-      100%;
-    height:
-      100%;
-    background-color:
-      #161616;
-    overflow:
-      hidden
-  }
+ 
 
   .App {
     position:
@@ -2353,6 +2391,6 @@
 
   .is-device .WorkPreview video {
     display: none
-  }
+  } */
 
 </style>
