@@ -1213,10 +1213,12 @@
 <style>
   .slider-wrapper {
     position: fixed;
-    bottom: 3rem;
+    bottom: 65px;
     width: calc(100% - 2rem);
+    max-width: 1500px;
     margin-left: 50%;
-    transform: translateX(-50%)
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   ._none .vue-slider-component .vue-slider-process,

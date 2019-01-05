@@ -3,9 +3,11 @@
     class="App u-fullSize"
     v-bind:class="frontState"
   >
-    <Header />
-    <nuxt />
-    <Footer />
+    <div class="app-container">
+      <Header />
+      <nuxt />
+      <Footer />
+    </div>
   </div>
 </template>
 <script>
@@ -63,6 +65,12 @@
     border: 0;
   }
 
+  .u-fullParent,
+  .u-fullSize {
+    width: 100%;
+    height: 100vh
+  }
+
   .App:not(._none) .copy-wrapper {
     position: absolute;
     top: 0;
@@ -80,6 +88,24 @@
   .App:not(._none):not(._centering) {
     font-family: -apple-system, " .SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI",
       "Helvetica Neue", "Lucida Grande", sans-serif
+  }
+
+  .App:not(._none) .copy {
+    max-width: 800px;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing) {
+    background: #161616;
+    color: #fff;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) {
+    font-family: GothamNarrow-Medium, -apple-system, " .SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI",
+      "Helvetica Neue", "Lucida Grande", sans-serif
+  }
+
+  .App._custom-font .Header-link {
+    font-size: 25px
   }
 
   /*
@@ -230,11 +256,7 @@
     cursor: default
   }
 
-  .u-fullParent,
-  .u-fullSize {
-    width: 100%;
-    height: 100vh
-  }
+  
 
   .u-fullParent {
     left: 0
@@ -1909,9 +1931,7 @@
     fill: none
   }
 
-  .Menu-links {
-    font-size: 20px
-  }
+  
 
   .Menu-links a {
     opacity: .12;

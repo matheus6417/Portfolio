@@ -133,7 +133,7 @@
 </template>
 <style>
   .Header-logo {
-    width: 42px;
+    width: 65px;
     opacity: 0 !important;
     display: none;
   }
@@ -171,7 +171,7 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    position: fixed;
+    position: relative;
     z-index: 10;
     user-select:
       none;
@@ -201,7 +201,7 @@
 
   .App:not(._none) .Header-nav a {
     display: inline-block;
-    margin-left: 1rem;
+    margin-left: 3rem;
   }
 
   .u-hitArea {
@@ -209,6 +209,27 @@
     background-size: 100%;
     cursor: pointer;
     z-index: 2;
+  }
+
+  /* --------- ._colors-contrast -------- */
+  .App:not(._none):not(._centering) .Header * {
+    text-decoration: none;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing) .Header * {
+    color: #fff;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing) .Header .svglogo-matheuscezar path {
+    stroke:
+      rgb(255, 255, 255) !important;
+    stroke-width: 12px !important;
+  }
+
+  .App:not(._none) .Header {
+    max-width: 1500px;
+    margin: 0 auto;
+    top: 60px;
   }
 
 </style>
