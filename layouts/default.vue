@@ -30,6 +30,13 @@
 
 </script>
 <style>
+  *,
+  :after,
+  :before {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   html,
   body,
   div,
@@ -45,7 +52,8 @@
   html {
     width: 100%;
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
+    background: #161616;
   }
 
   h1,
@@ -61,8 +69,40 @@
     margin: 0px
   }
 
+  h1,
+  .Header * {
+    font-size: calc(0.4464285714285714vw + 14.571428571428571px);
+  }
+
+  @media (min-width: 768px) {
+
+    h1,
+    .Header * {
+      font-size: calc(0.33783783783783783vw + 15.405405405405405px);
+    }
+  }
+
+  @media (min-width: 1360px) {
+    h1 .Header * {
+      font-size: calc(1.0714285714285714vw + 5.428571428571429px);
+    }
+  }
+
+  @media (min-width: 1920px) {
+
+    h1,
+    .Header * {
+      font-size: 24px;
+    }
+  }
+
   img {
     border: 0;
+  }
+
+  a,
+  a>div {
+    text-decoration: underline
   }
 
   .u-fullParent,
@@ -90,23 +130,91 @@
       "Helvetica Neue", "Lucida Grande", sans-serif
   }
 
-  .App:not(._none) .copy {
-    max-width: 800px;
+  .App {
+    background: #fff;
   }
 
+  .copy {
+    cursor: default;
+  }
+
+  /* color contrast em diante */
   .App:not(._none):not(._centering):not(._system-font):not(._spacing) {
     background: #161616;
     color: #fff;
   }
 
-  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) {
-    font-family: GothamNarrow-Medium, -apple-system, " .SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI",
-      "Helvetica Neue", "Lucida Grande", sans-serif
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing) .copy-link {
+    text-decoration: underline;
+    color: inherit
   }
 
-  .App._custom-font .Header-link {
-    font-size: 25px
+  .App:not(._none) .copy {
+    max-width: 800px;
+    width: calc(100% - 3rem);
   }
+
+  /* COLOR CONTRASTE EM DIANTE */
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) {
+    font-family: GothamNarrow-Book, -apple-system, " .SFNSText-Regular", San Francisco, Roboto, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
+    font-size: 2em;
+    line-height: 1.4em;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-link>div {
+    text-decoration: none;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-link {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    -webkit-transform: skewX(0deg);
+    transform: skewX(0deg);
+    transition: -webkit-transform .3s cubic-bezier(.17, .82, .45, .99);
+    transition: transform .3s cubic-bezier(.17, .82, .45, .99);
+    transition: transform .3s cubic-bezier(.17, .82, .45, .99), -webkit-transform .3s cubic-bezier(.17, .82, .45, .99);
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) *::-moz-selection {
+    background: transparent;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) *::selection {
+    background: transparent;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-link:hover {
+    -webkit-transform: skewX(10deg);
+    transform: skewX(10deg);
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-link:hover:after {
+    -webkit-transform: translateY(-110%);
+    transform: translateY(-110%);
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(120deg, #8146c5 0%, #0034a5 100%);
+    z-index: -1;
+    transition: -webkit-transform .3s cubic-bezier(.17, .82, .45, .99);
+    transition: transform .3s cubic-bezier(.17, .82, .45, .99);
+    transition: transform .3s cubic-bezier(.17, .82, .45, .99), -webkit-transform .3s cubic-bezier(.17, .82, .45, .99);
+  }
+
+  /* LOGO EM DIANTE */
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast):not(._custom-font) {}
 
   /*
 

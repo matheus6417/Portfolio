@@ -199,11 +199,10 @@
     position: relative;
   }
 
-  .App:not(._none) .Header-nav a {
+  /* .App:not(._none) .Header-nav a {
     display: inline-block;
     margin-left: 3rem;
-  }
-
+  } */
   .u-hitArea {
     background: transparent;
     background-size: 100%;
@@ -230,6 +229,23 @@
     max-width: 1500px;
     margin: 0 auto;
     top: 60px;
+  }
+
+  .App:not(._none) .nuxt-link-active {
+    opacity: 1;
+  }
+
+  .App:not(._none) .Header-nav a {
+    display: inline-block;
+    margin-left: 2em;
+  }
+
+  .App:not(._none) .Header {
+    width: calc(100% - 3em);
+  }
+
+  .App._custom-font .Header-link {
+    font-size: inherit;
   }
 
 </style>

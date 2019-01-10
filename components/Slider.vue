@@ -1561,4 +1561,16 @@
     position: absolute !important;
   }
 
+  .vue-slider-component .vue-slider {
+    background-color: rgba(0, 0, 0, 0.21);
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing) .vue-slider-component .vue-slider {
+    background-color: rgba(255, 255, 255, 0.41);
+  }
+
+  .vue-slider-component .vue-slider-process {
+    background-color: #fff;
+  }
+
 </style>
