@@ -150,7 +150,8 @@
   }
 
   .App:not(._none) .copy {
-    max-width: 800px;
+    /* max-width: 800px; */
+    max-width: 63ch;
     width: calc(100% - 3rem);
   }
 
@@ -160,7 +161,7 @@
   }
 
   .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
-    font-size: 2em;
+    font-size: 1.6em;
     line-height: 1.4em;
   }
 

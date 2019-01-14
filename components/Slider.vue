@@ -1214,7 +1214,7 @@
   .slider-wrapper {
     position: fixed;
     bottom: 65px;
-    width: calc(100% - 2rem);
+    width: calc(100% - 3em);
     max-width: 1500px;
     margin-left: 50%;
     -webkit-transform: translateX(-50%);
@@ -1262,6 +1262,7 @@
     -webkit-user-select: none;
     -moz-user-select: none;
     -o-user-select: none;
+    padding: 0 !important
   }
 
   .vue-slider-component.vue-slider-disabled {
