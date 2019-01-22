@@ -2,16 +2,13 @@
   <section>
     <Header />
     <Footer />
-    <h1>projects</h1>
     <Carousel />
   </section>
 </template>
 <script>
-
   import Carousel from '~/components/Carousel.vue'
   export default {
     components: {
-
       Carousel
     }
   }

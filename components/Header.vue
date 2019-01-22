@@ -97,36 +97,19 @@
           </g>
         </svg>
       </nuxt-link>
-      <!-- <div class="Header-menuButtonArea u-hitArea"></div>
-        <svg
-          class="Header-menuButton"
-          viewBox="0 0 44 32"
-        >
-          <rect
-            x="0"
-            y="4"
-            width="44"
-            height="3"
-          ></rect>
-          <rect
-            x="0"
-            y="16"
-            width="44"
-            height="3"
-          ></rect>
-        </svg> -->
       <div
         class="Header-nav"
         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"
       >
-        <a href="/">
+        <nuxt-link to="/">
           <div class="Header-link Header-link--regular">Home</div>
-        </a>
-        <a href="/work">
+        </nuxt-link>
+        <nuxt-link to="/work">
           <div class="Header-link Header-link--regular">Work</div>
-        </a> <a href="/about">
+        </nuxt-link>
+        <nuxt-link to="/about">
           <div class="Header-link Header-link--regular">About</div>
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -211,12 +194,23 @@
   }
 
   /* --------- ._colors-contrast -------- */
-  .App:not(._none):not(._centering) .Header * {
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .Header * {
     text-decoration: none;
   }
 
-  .App:not(._none):not(._centering):not(._system-font):not(._spacing) .Header * {
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing) .Header .Header-link {
     color: #fff;
+    opacity: 0.6;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing) .Header .Header-link:hover {
+    color: #fff;
+    opacity: 1;
+  }
+
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing) .Header .nuxt-link-exact-active .Header-link {
+    opacity: 1;
+    font-weight: bold;
   }
 
   .App:not(._none):not(._centering):not(._system-font):not(._spacing) .Header .svglogo-matheuscezar path {

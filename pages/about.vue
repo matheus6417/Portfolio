@@ -1,11 +1,11 @@
 <template>
   <section>
-
-    <h1>About</h1>
+    <div class="copy-wrapper">
+      <h1>About</h1>
+    </div>
   </section>
 </template>
 <script>
-
 </script>
 <style>
   .container {
@@ -37,4 +37,5 @@
   .links {
     padding-top: 15px;
   }
+
 </style>

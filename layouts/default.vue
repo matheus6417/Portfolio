@@ -1,8 +1,10 @@
 <template>
   <div
-    class="App u-fullSize"
+    role="main"
+    class="App u-fullSize "
     v-bind:class="frontState"
   >
+    <span class="copy-link-bg works-bg"></span>
     <div class="app-container">
       <Header />
       <nuxt />
@@ -22,14 +24,33 @@
       Footer
     },
     computed: { ...mapState(['frontState']),
-      // handler() {
-      //   // this.$store.commit('UPDATE','aaa');
-      //   return this.$store.state.frontState; },
-    },
+    }
   }
 
 </script>
 <style>
+  .noise {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: .05;
+  }
+
+  .main-title {
+    padding: .3em 1em .25em;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #4c2298;
+    background: #794fc5;
+  }
+
   *,
   :after,
   :before {
@@ -151,7 +172,7 @@
 
   .App:not(._none) .copy {
     /* max-width: 800px; */
-    max-width: 63ch;
+    max-width: 57ch;
     width: calc(100% - 3rem);
   }
 
@@ -161,7 +182,7 @@
   }
 
   .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
-    font-size: 1.6em;
+    font-size: 1.8em;
     line-height: 1.4em;
   }
 
@@ -207,15 +228,120 @@
     left: 0;
     width: 100%;
     height: 20px;
-    background: linear-gradient(120deg, #8146c5 0%, #0034a5 100%);
+    background: linear-gradient(120deg, #42b883 0%, #35495e 100%);
     z-index: -1;
     transition: -webkit-transform .3s cubic-bezier(.17, .82, .45, .99);
     transition: transform .3s cubic-bezier(.17, .82, .45, .99);
     transition: transform .3s cubic-bezier(.17, .82, .45, .99), -webkit-transform .3s cubic-bezier(.17, .82, .45, .99);
   }
 
+  .App::before {
+    content: "";
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://anatacreative.com/codepen/noise.png");
+    -webkit-animation: 1s infinite noise;
+    animation: 1s infinite noise;
+    pointer-events: none;
+    opacity: 0;
+  }
+
   /* LOGO EM DIANTE */
-  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast):not(._custom-font) {}
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast):not(._custom-font)::before {
+    opacity: 1;
+  }
+
+  @-webkit-keyframes noise {
+
+    0%,
+    100% {
+      background-position: 0 0;
+    }
+
+    10% {
+      background-position: -5% -10%;
+    }
+
+    20% {
+      background-position: -15% 5%;
+    }
+
+    30% {
+      background-position: 7% -25%;
+    }
+
+    40% {
+      background-position: 20% 25%;
+    }
+
+    50% {
+      background-position: -25% 10%;
+    }
+
+    60% {
+      background-position: 15% 5%;
+    }
+
+    70% {
+      background-position: 0% 15%;
+    }
+
+    80% {
+      background-position: 25% 35%;
+    }
+
+    90% {
+      background-position: -10% 10%;
+    }
+  }
+
+  @keyframes noise {
+
+    0%,
+    100% {
+      background-position: 0 0;
+    }
+
+    10% {
+      background-position: -5% -10%;
+    }
+
+    20% {
+      background-position: -15% 5%;
+    }
+
+    30% {
+      background-position: 7% -25%;
+    }
+
+    40% {
+      background-position: 20% 25%;
+    }
+
+    50% {
+      background-position: -25% 10%;
+    }
+
+    60% {
+      background-position: 15% 5%;
+    }
+
+    70% {
+      background-position: 0% 15%;
+    }
+
+    80% {
+      background-position: 25% 35%;
+    }
+
+    90% {
+      background-position: -10% 10%;
+    }
+  }
 
   /*
 
@@ -365,7 +491,7 @@
     cursor: default
   }
 
-  
+
 
   .u-fullParent {
     left: 0
@@ -642,7 +768,7 @@
       sans-serif
   }
 
- 
+
 
   .App {
     position:
@@ -2040,7 +2166,7 @@
     fill: none
   }
 
-  
+
 
   .Menu-links a {
     opacity: .12;
