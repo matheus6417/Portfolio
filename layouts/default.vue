@@ -262,12 +262,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: 320px 320px;
+    background-size: 120px 120px;
     background: url("https://anatacreative.com/codepen/noise.png");
     -webkit-animation: 0.8s infinite noise;
     animation: 0.8s infinite noise;
     pointer-events: none;
     opacity: 0;
+  }
+
+  @media (min-width: 768px) {
+    .App::before {
+      background-size: 320px 320px;
+    }
   }
 
   /* LOGO EM DIANTE */
