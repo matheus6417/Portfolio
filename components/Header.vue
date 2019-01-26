@@ -222,7 +222,19 @@
   .App:not(._none) .Header {
     max-width: 1500px;
     margin: 0 auto;
-    top: 60px;
+    top: 6vw;
+  }
+
+  @media (min-width: 768px) {
+    .App:not(._none) .Header {
+      top: 3vw;
+    }
+  }
+
+  @media (min-width: 1360px) {
+    .App:not(._none) .Header {
+      top: 60px;
+    }
   }
 
   .App:not(._none) .nuxt-link-active {
