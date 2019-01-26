@@ -101,14 +101,14 @@
         class="Header-nav"
         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"
       >
-        <nuxt-link to="/">
-          <div class="Header-link Header-link--regular">Home</div>
-        </nuxt-link>
         <nuxt-link to="/work">
           <div class="Header-link Header-link--regular">Work</div>
         </nuxt-link>
         <nuxt-link to="/about">
           <div class="Header-link Header-link--regular">About</div>
+        </nuxt-link>
+        <nuxt-link to="/blog">
+          <div class="Header-link Header-link--regular">Blog</div>
         </nuxt-link>
       </div>
     </div>

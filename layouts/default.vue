@@ -40,7 +40,7 @@
     opacity: .05;
   }
 
-  .main-title {
+  /* .main-title {
     padding: .3em 1em .25em;
     font-weight: 400;
     font-size: 3vw;
@@ -49,8 +49,7 @@
     letter-spacing: .15em;
     color: #4c2298;
     background: #794fc5;
-  }
-
+  } */
   *,
   :after,
   :before {
@@ -95,17 +94,32 @@
     font-size: calc(0.4464285714285714vw + 14.571428571428571px);
   }
 
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
+    font-size: calc(0.9714285714285714vw + 15.428571428571429px);
+    line-height: calc(1.5714285714285714vw + 19.428571428571429px);
+  }
+
   @media (min-width: 768px) {
 
     h1,
     .Header * {
       font-size: calc(0.33783783783783783vw + 15.405405405405405px);
     }
+
+    .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
+      font-size: calc(0.9714285714285714vw + 15.428571428571429px);
+      line-height: calc(1.5714285714285714vw + 19.428571428571429px);
+    }
   }
 
   @media (min-width: 1360px) {
     h1 .Header * {
       font-size: calc(1.0714285714285714vw + 5.428571428571429px);
+    }
+
+    .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
+      font-size: calc(0.9714285714285714vw + 15.428571428571429px);
+      line-height: calc(1.5714285714285714vw + 19.428571428571429px);
     }
   }
 
@@ -114,6 +128,11 @@
     h1,
     .Header * {
       font-size: 24px;
+    }
+
+    .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
+      font-size: 36px;
+      line-height: 52px
     }
   }
 
@@ -130,6 +149,11 @@
   .u-fullSize {
     width: 100%;
     height: 100vh
+  }
+
+  .App._none,
+  .App._centering {
+    font-family: 'Times New Roman', Times, serif
   }
 
   .App:not(._none) .copy-wrapper {
@@ -179,11 +203,6 @@
   /* COLOR CONTRASTE EM DIANTE */
   .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) {
     font-family: GothamNarrow-Book, -apple-system, " .SFNSText-Regular", San Francisco, Roboto, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
-  }
-
-  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
-    font-size: 1.8em;
-    line-height: 1.4em;
   }
 
   .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-link>div {
