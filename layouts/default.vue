@@ -95,8 +95,8 @@
   }
 
   .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
-    font-size: calc(0.9714285714285714vw + 15.428571428571429px);
-    line-height: calc(1.5714285714285714vw + 19.428571428571429px);
+    font-size: calc(0.8714285714285714vw + 14.428571428571429px);
+    line-height: calc(1.4714285714285714vw + 17.428571428571429px);
   }
 
   @media (min-width: 768px) {
