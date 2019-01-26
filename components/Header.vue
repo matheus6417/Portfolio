@@ -164,12 +164,13 @@
     height: 3rem;
     margin: 0;
     padding: 0 1rem;
-    width: calc(100% - 2rem);
+    /* width: calc(100% - 2rem); */
   }
 
   .App:not(._none) .Header-nav {
     opacity: 0;
     display: flex;
+    padding-right: 1em;
   }
 
   .App:not(._none) .Header-nav a,
@@ -229,6 +230,10 @@
     .App:not(._none) .Header {
       top: 3vw;
     }
+
+    .App:not(._none) .Header {
+      width: calc(100% - 3em);
+    }
   }
 
   @media (min-width: 1360px) {
@@ -244,10 +249,6 @@
   .App:not(._none) .Header-nav a {
     display: inline-block;
     margin-left: 2em;
-  }
-
-  .App:not(._none) .Header {
-    width: calc(100% - 3em);
   }
 
   .App._custom-font .Header-link {
