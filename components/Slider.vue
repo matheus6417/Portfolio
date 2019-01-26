@@ -256,7 +256,7 @@
       },
       data: {
         type: Array,
-        default: ["_none", "_centering", "_system-font", "_spacing", "_colors-contrast", "_custom-font", "_logo",
+        default: ["_none", "_centering", "_system-font", "_spacing", "_colors-contrast", "_custom-font", "_images",
           "_default", "_bigger-fonts", "_decorate-links", "_images-links", "_waving-fonts", "_brutalism-fonts",
           "_brutalism-images", "_brutalism-grid", "_brutalism-tuned", "_becoming-weird", "_enough", "_wtf", "_wtfwtf"
         ]

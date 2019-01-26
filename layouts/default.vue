@@ -262,9 +262,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background-size: 320px 320px;
     background: url("https://anatacreative.com/codepen/noise.png");
-    -webkit-animation: 1s infinite noise;
-    animation: 1s infinite noise;
+    -webkit-animation: 0.8s infinite noise;
+    animation: 0.8s infinite noise;
     pointer-events: none;
     opacity: 0;
   }

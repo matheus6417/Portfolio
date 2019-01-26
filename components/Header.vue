@@ -131,7 +131,7 @@
     display: inline-block;
   }
 
-  ._logo .HeaderLogo-anim {
+  ._images .HeaderLogo-anim {
     position: absolute;
     width: 14px;
     height: auto;
@@ -139,7 +139,7 @@
     top: 29px;
   }
 
-  ._logo .svglogo-matheuscezar #bluefilters {
+  ._images .svglogo-matheuscezar #bluefilters {
     display: none;
   }
 
