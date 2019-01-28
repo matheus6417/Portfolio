@@ -1,9 +1,5 @@
 <template>
-  <div
-    role="main"
-    class="App u-fullSize "
-    v-bind:class="frontState"
-  >
+  <div role="main" class="App u-fullSize " v-bind:class="frontState">
     <span class="copy-link-bg works-bg"></span>
     <div class="app-container">
       <Header />
@@ -94,7 +90,8 @@
     font-size: calc(0.4464285714285714vw + 14.571428571428571px);
   }
 
-  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
+  .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-text {
+    display: inline;
     font-size: calc(0.9714285714285714vw + 15.428571428571429px);
     line-height: calc(1.5714285714285714vw + 19.428571428571429px);
   }
@@ -106,7 +103,7 @@
       font-size: calc(0.33783783783783783vw + 15.405405405405405px);
     }
 
-    .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
+    .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-text {
       font-size: calc(0.9714285714285714vw + 15.428571428571429px);
       line-height: calc(1.5714285714285714vw + 19.428571428571429px);
     }
@@ -117,7 +114,7 @@
       font-size: calc(1.0714285714285714vw + 5.428571428571429px);
     }
 
-    .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
+    .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-text {
       font-size: calc(0.9714285714285714vw + 15.428571428571429px);
       line-height: calc(1.5714285714285714vw + 19.428571428571429px);
     }
@@ -130,7 +127,7 @@
       font-size: 24px;
     }
 
-    .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy {
+    .App:not(._none):not(._centering):not(._system-font):not(._spacing):not(._colors-contrast) .copy-text {
       font-size: 36px;
       line-height: 52px
     }
@@ -192,12 +189,6 @@
   .App:not(._none):not(._centering):not(._system-font):not(._spacing) .copy-link {
     text-decoration: underline;
     color: inherit
-  }
-
-  .App:not(._none) .copy {
-    /* max-width: 800px; */
-    max-width: 57ch;
-    width: calc(100% - 3rem);
   }
 
   /* COLOR CONTRASTE EM DIANTE */

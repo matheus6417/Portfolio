@@ -2,40 +2,26 @@
   <section>
     <div>
       <div class="copy-wrapper">
-        <h1 class="copy"> I'm <a
-            class="copy-link"
-            href="/about"
-          >
-            <div>Matheus Cezar</div>
-          </a>. A vegan Front-End developer based in Itajai, Brazil. My <a
-            href="/work"
-            class="copy-link"
-            id="test"
-          >
-            <div> works</div>
-          </a> include websites, intranets, and real-time dashboards used by over 2 million people monthly. <br>I can
-          tackle everything from PSD to perfect-handcrafted <a
-            href="#"
-            class="copy-link"
-          >
-            <div>HTML/CSS</div>
-          </a>, to complex web applications leveraging the lastest <a
-            href="#"
-            class="copy-link"
-          >
-            <div>Javascript</div>
-          </a> cool techs like React and <a
-            href="#"
-            class="copy-link"
-          >
-            <div>Vue</div>
-          </a>. <br>If you have a challenging UI to come to life, a web project that needs attention and caring, or the
-          highest enterprise standards requirements to met, <a
-            href="/about"
-            class="copy-link"
-          >
-            <div>contact me now!</div>
-          </a></h1>
+        <div class="copy">
+          <span class="copy-text"> I'm </span>
+          <a class="copy-link" href="/about">
+            <span class="copy-text">Matheus Cezar</span>
+          </a>
+          <span class="copy-text">. A vegan Front-End developer based in Itajai, Brazil. My</span>
+          <a href="/work" class="copy-link">
+            <span class="copy-text">works</span>
+          </a>
+          <span class="copy-text">include websites, intranets, and real-time dashboards used by over 2 million people
+            monthly. <br>I can tackle everything from PSD to perfect-handcrafted HTML/CSS, to complex web applications
+            leveraging the lastest Javascript cool techs like React and</span>
+          <a href="#" class="copy-link">
+            <span class="copy-text">Vue</span>
+          </a>. <span class="copy-text"> <br>If you have a challenging UI to come to life, a web project that needs
+            attention and caring, or the highest enterprise standards requirements to met,</span>
+          <a href="/about" class="copy-link">
+            <span class="copy-text">contact-me</span>
+          </a>
+        </div>
       </div>
     </div>
     </div>
@@ -88,6 +74,28 @@
   .copy-link>div {
     position: relative;
     display: inline-block;
+  }
+
+  .copy-link-image {
+    position: absolute;
+    opacity: 0.8;
+  }
+
+  .App:not(._none) .copy {
+    width: calc(100% - 3rem);
+    max-width: 1200px;
+  }
+
+  /* .copy-link-image {
+    z-index: -1;
+  } */
+  .intro__line {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
 
 </style>
