@@ -234,7 +234,7 @@
         v-model="val"
         :min="min"
         :max="max"
-      />
+      />(WIP)
     </div>
   </div>
 </template>

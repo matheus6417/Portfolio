@@ -4,26 +4,25 @@
       <div class="copy-wrapper">
         <div class="copy">
           <span class="copy-text"> I'm </span>
-          <a class="copy-link" href="/about">
+          <a class="copy-link" href="https://www.linkedin.com/in/matheuscezar/">
             <span class="copy-text">Matheus Cezar</span>
           </a>
           <span class="copy-text">. A vegan Front-End developer based in Itajai, Brazil. My</span>
-          <a href="/work" class="copy-link">
+          <a href="https://www.linkedin.com/in/matheuscezar/" class="copy-link">
             <span class="copy-text">works</span>
           </a>
-          <span class="copy-text">include websites, intranets, and real-time dashboards used by over 2 million people
+          <span class="copy-text">include websites, intranets, customizable platforms and real-time dashboards used by over 2 million people
             monthly. <br>I can tackle everything from PSD to perfect-handcrafted HTML/CSS, to complex web applications
-            leveraging the lastest Javascript cool techs like React and</span>
+            leveraging the lastest Javascript cool techs like </span>
           <a href="#" class="copy-link">
-            <span class="copy-text">Vue</span>
+            <span class="copy-text">Vue 2 & 3</span>
           </a>. <span class="copy-text"> <br>If you have a challenging UI to come to life, a web project that needs
             attention and caring, or the highest enterprise standards requirements to met,</span>
-          <a href="/about" class="copy-link">
+          <a href="https://www.linkedin.com/in/matheuscezar/" class="copy-link">
             <span class="copy-text">contact-me</span>
           </a>
         </div>
       </div>
-    </div>
     </div>
     <div class="slider-wrapper">
       <Slider />

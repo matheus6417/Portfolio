@@ -97,20 +97,17 @@
           </g>
         </svg>
       </nuxt-link>
-      <div
+      <!-- <div
         class="Header-nav"
         style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"
       >
-        <nuxt-link to="/work">
+        <nuxt-link to="https://www.linkedin.com/in/matheuscezar/">
           <div class="Header-link Header-link--regular">Work</div>
         </nuxt-link>
-        <nuxt-link to="/about">
+        <nuxt-link to="https://www.linkedin.com/in/matheuscezar/">
           <div class="Header-link Header-link--regular">About</div>
         </nuxt-link>
-        <nuxt-link to="/blog">
-          <div class="Header-link Header-link--regular">Blog</div>
-        </nuxt-link>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
